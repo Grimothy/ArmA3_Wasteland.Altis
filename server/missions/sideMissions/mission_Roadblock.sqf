@@ -69,8 +69,14 @@ _successExec =
 	_box1 = createVehicle [_randomCase, _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
 	[_box1, _randomBox] call fn_refillbox;
+<<<<<<< HEAD
 	// Mission completed
 
+=======
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
+	{ deleteVehicle _x } forEach [_barGate, _bunker1, _bunker2];
+	{ _x setVariable ["allowDamage", true, true] } forEach [_obj1, _obj2];
+>>>>>>> 2850eea... Oh boy :)
 	
 
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
