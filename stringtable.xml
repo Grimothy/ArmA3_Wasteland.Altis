@@ -90,6 +90,8 @@
 		<Key ID="STR_WL_ShopDescriptions_Warchest">
 			<English>A safe to store your team's money.</English>
 		</Key>
+		<Key ID="STR_WL_ShopDescriptions_Pinlock">
+            <English>This programming tool is a once use only and non removable device to add a pincode to an owned vehicle. By using this your friends can also lock and unlock your vehicle!</English>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">

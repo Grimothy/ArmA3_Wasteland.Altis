@@ -60,6 +60,7 @@ loadScreen = "mapConfig\Loading.jpg";
 
 
 
+#include "addons\vPin\dialog\vPin_mainMenu.hpp"
 
 class RscTitles
 {
