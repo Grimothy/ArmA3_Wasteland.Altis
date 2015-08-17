@@ -60,5 +60,6 @@ _adjustZ = switch (true) do
 _pos = getPosATL _obj;
 _pos set [2, (_pos select 2) + _adjustZ];
 _obj setPos _pos;
+_obj setVariable ["R3F_LOG_disabled",false,true];
 
 [_obj] call basePartSetup;

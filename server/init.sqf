@@ -110,7 +110,8 @@ if (isServer) then
 		"A3W_teamPlayersMap",
 		"A3W_remoteBombStoreRadius",
 		"A3W_vehiclePurchaseCooldown",
-		"A3W_disableGlobalVoice",
+		"A3W_globalVoiceWarnTimer",
+		"A3W_globalVoiceMaxWarns",
 		"A3W_antiHackMinRecoil",
 		"A3W_spawnBeaconCooldown",
 		"A3W_spawnBeaconSpawnHeight",
@@ -124,6 +125,13 @@ if (isServer) then
 		"A3W_atmEditorPlacedOnly",
 		"A3W_atmMapIcons",
 		"A3W_atmRemoveIfDisabled",
+		"A3W_extDB_PlayerSave_ServerID",
+		"A3W_extension",
+		"A3W_vehicleThermals",
+		"A3W_firstPersonCamOnFoot",
+		"A3W_firstPersonCamNotDriver",
+		"A3W_resupplyCostPR",
+		"A3W_territoryAllowed",
 		"A3W_uavControl",
 		"A3W_townSpawnCooldown",
 		"A3W_survivalSystem",
@@ -148,6 +156,7 @@ _warchestMoneySavingOn = ["A3W_warchestMoneySaving"] call isConfigOn;
 _beaconSavingOn = ["A3W_spawnBeaconSaving"] call isConfigOn;
 _timeSavingOn = ["A3W_timeSaving"] call isConfigOn;
 _weatherSavingOn = ["A3W_weatherSaving"] call isConfigOn;
+vehicleThermalsOn = ["A3W_vehicleThermals"] call isConfigOn;
 
 _purchasedVehicleSavingOn = ["A3W_purchasedVehicleSaving"] call isConfigOn;
 _missionVehicleSavingOn = ["A3W_missionVehicleSaving"] call isConfigOn;
