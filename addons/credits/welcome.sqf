@@ -14,7 +14,7 @@ _role2names = ["Ftnwo.clan@gmail.com"];
 _role3 = "Supported Mods";
 _role3names = ["Install JSRS3: DragonFyre,Blastcore A3 Phoenix (v1 or v2)  for a better gaming experience *CBA v1.1.22.150602 Required* "];
 _role4 = "TeamSpeak";
-_role4names = ["tsdal1.vilayer.com:4071"];
+_role4names = ["ultra-a3.ddns.net:9020"];
 _role5 = "Steam Group";
 _role5names = ["Come join our Steam community. Search for UltraA3Wasteland on Steam"];
 
