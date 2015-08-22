@@ -747,8 +747,8 @@ helicoptersArray = compileFinal str
 	["CH-49 Mohawk", "I_Heli_Transport_02_F", 10000, "vehicle"], // AW101
 
 	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
-	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 15000, "vehicle"],
-	["Mi-290 Taru (Ammo) [DLC]", "O_Heli_Transport_04_ammo_F", 25000, "vehicle"],
+	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 150000, "vehicle"],
+	["Mi-290 Taru (Ammo) [DLC]", "O_Heli_Transport_04_ammo_F", 250000, "vehicle"],
 
 	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
