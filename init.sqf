@@ -98,5 +98,6 @@ if (hasInterface || isServer) then
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
+	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
 };
 
