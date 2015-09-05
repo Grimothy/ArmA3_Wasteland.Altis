@@ -1,10 +1,10 @@
 //AlPMaker
 _max = 10; snext = false; plist = []; pselect5 = "";
-{if (getPlayerUID _x != "") then {plist set [count plist, name _x];};} forEach entities "CAManBase";
-{if ((count crew _x) > 0) then {{if (getPlayerUID _x != "") then {plist set [count plist, name _x];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
+{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach entities "CAManBase";
+{if ((count crew _x) > 0) then {{if ((_x != player) && (getPlayerUID _x != "")) then {plist set [count plist, name _x];};} forEach crew _x;};} foreach (entities "LandVehicle" + entities "Air" + entities "Ship");
 smenu =
 {
-	_pmenu = [["Unstuck player",true]];
+	_pmenu = [["Teleport To Me",true]];
 	for "_i" from (_this select 0) to (_this select 1) do
 	{_arr = [format['%1', plist select (_i)], [12],  "", -5, [["expression", format ["pselect5 = plist select %1;", _i]]], "1", "1"]; _pmenu set [_i + 2, _arr];};
 	if (count plist > (_this select 1)) then {_pmenu set [(_this select 1) + 2, ["Next", [13], "", -5, [["expression", "snext = true;"]], "1", "1"]];}
@@ -24,8 +24,7 @@ if (pselect5 != "exit") then
 	_name = pselect5;
 	{    
 	if (isPlayer _x && (name _x == _name)) then {    
-          _unstuck = [(getPosASL _x select 0), (getPosASL _x select 1), (getPosASL _x select 2) + 1000]; 
-		  _x setposATL _unstuck
+          vehicle _x setPos (position player);
 	}  
 	} forEach playableUnits;
 };

@@ -39,16 +39,16 @@ if (_uid call isAdmin) then
 					execVM "client\systems\adminPanel\vehicleManagement.sqf";
 					if (!isNil "notifyAdminMenu") then { ["VehicleManagement", "Opened"] call notifyAdminMenu };
 				};
-				case 2: //Tags
-				{
-					execVM "client\systems\adminPanel\playerTags.sqf";
-					//Is logged from inside target script
-				};
-				case 3: //Unstuck player
+				case 2: //Unstuck player
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\unstuck.sqf";
 					if (!isNil "notifyAdminMenu") then { ["UnstuckPlayer", "Used"] call notifyAdminMenu };
+				};
+				case 3: //Tags
+				{
+					execVM "client\systems\adminPanel\playerTags.sqf";
+					//Is logged from inside target script
 				};
 				case 4: //Teleport
 				{
@@ -62,19 +62,19 @@ if (_uid call isAdmin) then
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				//case 5: //Teleport player to me
-				//{
-					//closeDialog 0;
-					//execVM "client\systems\adminPanel\tptome.sqf";
-					//if (!isNil "notifyAdminMenu") then { ["TeleportToMe", "Used"] call notifyAdminMenu };
-				//};
+				case 5: //Teleport player to me
+				{
+					closeDialog 0;
+					execVM "client\systems\adminPanel\tptome.sqf";
+					if (!isNil "notifyAdminMenu") then { ["TeleportToMe", "Used"] call notifyAdminMenu };
+				};
 				case 6: //Teleport me to player
-				//{
-					//closeDialog 0;
-					//execVM "client\systems\adminPanel\tpmeto.sqf";
-					//if (!isNil "notifyAdminMenu") then { ["TeleportMeTo", "Used"] call notifyAdminMenu };
-				//};
-				case 5: //Money
+				{
+					closeDialog 0;
+					execVM "client\systems\adminPanel\tpmeto.sqf";
+					if (!isNil "notifyAdminMenu") then { ["TeleportMeTo", "Used"] call notifyAdminMenu };
+				};
+				case 7: //Money
 				{
 					_money = 5000;
 					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
@@ -151,7 +151,27 @@ if (_uid call isAdmin) then
 					hint format["Server FPS: %1",serverFPS];
 					if (!isNil "notifyAdminMenu") then { ["ServerFPS", "Used"] call notifyAdminMenu };
 				};
-				case 7: //Access TOParma News
+				case 7: //Lock Base Objects within 15m
+				{
+					execVM "client\systems\adminPanel\Lock.sqf";
+					if (!isNil "notifyAdminMenu") then { ["LockObjects", "Opened"] call notifyAdminMenu };
+				};
+				case 8: //Unlock Base Objects within 15m
+				{
+					execVM "client\systems\adminPanel\unLock.sqf";
+					if (!isNil "notifyAdminMenu") then { ["UnlockObjects", "Opened"] call notifyAdminMenu };
+				};
+				case 9: //Delete Unlocked Base Objects within 15m
+				{
+					execVM "client\systems\adminPanel\deleteUnlocked.sqf";
+					if (!isNil "notifyAdminMenu") then { ["DeleteUnlockedObjects", "Opened"] call notifyAdminMenu };
+				};
+				case 10: //Relock objects within 30m
+				{
+					execVM "client\systems\adminPanel\reLock.sqf";
+					if (!isNil "notifyAdminMenu") then { ["RelockObjects", "Opened"] call notifyAdminMenu };
+				};
+				case 11: //Access TOParma News
 				{
 					[] call loadTOParmaInfo;
 					if (!isNil "notifyAdminMenu") then { ["News", "Opened"] call notifyAdminMenu };
