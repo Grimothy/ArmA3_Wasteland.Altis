@@ -63,20 +63,20 @@ _successExec =
 {
 	// Mission completed
 	
-	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers","mission_TOP_Sniper","mission_TOP_Gear1","airdrop_DLC_Rifles","airdrop_DLC_LMGs","airdrop_Snipers"] call BIS_fnc_selectRandom;
+	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers","mission_TOP_Sniper","Launcers_Tier_2","airdrop_DLC_Rifles","airdrop_DLC_LMGs","airdrop_Snipers"] call BIS_fnc_selectRandom;
 	_randomCase = ["Box_FIA_Support_F","Box_FIA_Wps_F","Box_FIA_Ammo_F","Box_NATO_Wps_F","Box_East_WpsSpecial_F","Box_IND_WpsSpecial_F"] call BIS_fnc_selectRandom;
 	
 	_box1 = createVehicle [_randomCase, _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
 	[_box1, _randomBox] call fn_refillbox;
-<<<<<<< HEAD
+
 	// Mission completed
 
-=======
+
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
 	{ deleteVehicle _x } forEach [_barGate, _bunker1, _bunker2];
 	{ _x setVariable ["allowDamage", true, true] } forEach [_obj1, _obj2];
->>>>>>> 2850eea... Oh boy :)
+
 	
 
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];

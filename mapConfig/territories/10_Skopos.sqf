@@ -43,3 +43,18 @@ _marker setMarkerType "mil_flag";
 _marker setMarkerText "C";
 _marker setMarkerSize [.5, .5];
 _marker setMarkerColor "ColorYellow";
+
+_pos = [10793.283,10872.109,4.8420792];
+_marker = createMarker ["TERRITORY_10_Skopos_D", _pos];
+_marker setMarkerShape "RECTANGLE";
+_marker setMarkerBrush "DiagGrid";
+_marker setMarkerSize [15, 30];
+_marker setMarkerColor "ColorYellow";
+_marker setMarkerType "Empty";
+
+_pos = [10793.283,10872.109,4.8420792];
+_marker = createMarker ["FLAG_10_Skopos_D", _pos];
+_marker setMarkerType "mil_flag";
+_marker setMarkerText "D";
+_marker setMarkerSize [.5, .5];
+_marker setMarkerColor "ColorYellow";

@@ -48,6 +48,7 @@
 	["TERRITORY_10_Skopos_A", "SKOPOS (A)", 5000],
 	["TERRITORY_10_Skopos_B", "SKOPOS (B)", 5000],
 	["TERRITORY_10_Skopos_C", "SKOPOS (C)", 5000],
+	["TERRITORY_10_Skopos_D", "SKOPOS (D)", 5000],
 	["TERRITORY_11_Selakano_Coast_A", "SELAKANO COAST (A)", 7000],
 	["TERRITORY_11_Selakano_Coast_B", "SELAKANO COAST (B)", 7000],
 	["TERRITORY_11_Selakano_Coast_C", "SELAKANO COAST (C)", 7000],

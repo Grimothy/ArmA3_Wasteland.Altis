@@ -2703,7 +2703,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=184;
+		items=194;
 		class Item0
 		{
 			position[]={3612.1487,12.11851,13020.892};
@@ -4092,7 +4092,107 @@ class Mission
 			type="Empty";
 			colorName="ColorOrange";
 		};
+		class Item184
+		{
+			position[]={23025.889,13.56551,19433.859};
+			name="RoadBlock_1";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-136.82115;
+		};
+	
+	class Item185
+		{
+			position[]={17420.93,7.3394189,13728.772};
+			name="RoadBlock_2";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-153.256;
+		};
+	
+		class Item186
+		{
+			position[]={14780.016,21.329321,17714.207};
+			name="RoadBlock_3";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-227.85867;
+		};
+	
+	class Item187
+		{
+			position[]={18568.914,40.868103,16534.154};
+			name="RoadBlock_4";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-111.717;
+		};
+	
+	class Item188
+		{
+			position[]={9129.1836,89.711617,15596.495};
+			name="RoadBlock_5";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=15.9824;
+		};
+	
+	class Item189
+		{
+			position[]={3953.4282,49.114174,12210.488};
+			name="RoadBlock_6";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=95.785599;
+		};
+	
+	class Item190
+		{
+			position[]={4434.0444,270.83322,20827.891};
+			name="RoadBlock_7";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-210.60201;
+		};
+	
+	class Item191
+		{
+			position[]={9041.0586,18.735415,21335.852};
+			name="RoadBlock_8";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-296.94199;
+		};
+	
+	class Item192
+		{
+			position[]={26760.328,22.531874,23035.527};
+			name="RoadBlock_9";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-152.53999;
+		};
+	
+		class Item193
+		{
+			position[]={20561.07,27.045717,8117.4487};
+			name="RoadBlock_10";
+			type="Empty";
+			colorName="ColorUNKNOWN";
+			angle=-340.29938;
+		};
+	
+	class Item194
+		{
+			position[]={17417.816,13.29987,13212.462};
+			name="VehStore7_landSpawn";
+			type="Empty";
+			colorName="ColorBlack";
+			angle=44.645718;
+		};
 	};
+	
+	
 };
 class Intro
 {
