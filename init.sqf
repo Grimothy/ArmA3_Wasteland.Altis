@@ -99,6 +99,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
-	[] execVM "VCOMAI\init.sqf";
+	//[] execVM "VCOMAI\init.sqf";
+	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";          // Keypad for base locking
 };
 
