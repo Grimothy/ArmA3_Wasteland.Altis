@@ -91,7 +91,8 @@
 			<English>A safe to store your team's money.</English>
 		</Key>
 		<Key ID="STR_WL_ShopDescriptions_Pinlock">
-            <English>This programming tool is a once use only and non removable device to add a pincode to an owned vehicle. By using this your friends can also lock and unlock your vehicle!</English>
+            <English>This programming tool is a once use only and non removable device to add a pincode to an owned vehicle.By using this your friends can also lock and unlock your vehicle! !!DISCLAIMER: BE SURE TO STILL LOCK THE THE VEHICLE USING THE LOCK FUNCTION IN THE SCROLL MENU!!</English>
+		</Key>
 	</Package>
 	<Package name="Dialogs">
 		<Key ID="STR_WL_dialog_TeamkillText">
