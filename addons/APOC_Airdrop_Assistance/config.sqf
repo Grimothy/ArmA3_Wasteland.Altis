@@ -27,6 +27,7 @@ APOC_AA_SupOptions =
 	["Launchers Tier 2","Launcers_Tier_2",50000,"supply"],
 	["Group Elite Crate","GEVP",165000,"supply"],
 	//["Group Elite Crate Lite","GEVPL",80000,"Supply"],
+	["Ammo Crate", "Ammo_Drop",75000,"supply"],
 	["Food","Land_Sacks_goods_F",5000,"picnic"],
 	["Water","Land_BarrelWater_F",5000,"picnic"]
 ];
