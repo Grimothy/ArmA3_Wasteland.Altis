@@ -22,6 +22,13 @@ _object setMarkerText "TS: Ultra-a3.ddns.net:9020";
 _object setMarkerColor "ColorOrange";	
 _object setMarkerType "mil_dot";
 
+_pos = [1114.3447,2348.644,0];
+_object = createMarker ["Global", _pos];
+_object setMarkerShape "ICON";
+_object setMarkerText "Spammng global may result in a Kick/BAN";
+_object setMarkerColor "ColorOrange";	
+_object setMarkerType "mil_dot";
+
 _pos = [1114.3447,2854.9221,0];
 _object = createMarker ["Email", _pos];
 _object setMarkerShape "ICON";
