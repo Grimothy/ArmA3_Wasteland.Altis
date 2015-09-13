@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","_pos","_rad","_vehiclePosArray","_vPos1","_vPos2","_vPos3","_vehiclePos1","_vehiclePos2","_vehiclePos3","_vehiclePos4","_vehicles","_leader","_speedMode","_waypoint","_vehicleName","_numWaypoints","_cash","_drugpilerandomizer","_drugpile","_box1","_box2","_box3"];
+private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_createVehicle","_pos","_rad","_vehiclePosArray","_vPos1","_vPos2","_vPos3","_vehiclePos1","_vehiclePos2","_vehiclePos3","_vehiclePos4","_vehicles","_leader","_speedMode","_waypoint","_vehicleName","_numWaypoints","_box1","_box2","_box3","_box4"];
 
 _setupVars =
 {
@@ -150,23 +150,8 @@ _successExec =
 		_cash setVariable["owner","world",true];
 	};
 	
-	_drugpilerandomizer = [8,12,16];
-	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
-	
-	for "_i" from 1 to _drugpile do 
-	{
-	  private["_item"];
-	  _item = [
-	          ["lsd", "Land_WaterPurificationTablets_F"],
-	          ["marijuana", "Land_VitaminBottle_F"],
-	          ["cocaine","Land_PowderedMilk_F"],
-	          ["heroin", "Land_PainKillers_F"]
-	        ] call BIS_fnc_selectRandom;
-	  [_item, _lastPos] call _drop_item;
-	};
-
 	_box1 = "Box_East_Wps_F" createVehicle getMarkerPos _marker;
-    [_box1,"mission_USLaunchers"] call fn_refillbox;
+    [_box1,"Launcers_Tier_2"] call fn_refillbox;
 	_box1 allowDamage false;
 	
 	_box2 = "Box_NATO_Wps_F" createVehicle getMarkerPos _marker;
@@ -178,8 +163,13 @@ _successExec =
 	_box3 allowDamage false;
 	
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3];
+	_box4 = "B_supplyCrate_F" createVehicle getMarkerPos _marker;
+    [_box4,"ammo_drop"] call fn_refillbox;
+	_box4 allowDamage false;
+	
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3, _box4];
 
-	_successHintMessage = "The patrol has been stopped, the money, drugs, crates and vehicles are yours to take.";
+	_successHintMessage = "The patrol has been stopped, the money and crates and vehicles are yours to take.";
 };
 
 _this call moneyMissionProcessor;
