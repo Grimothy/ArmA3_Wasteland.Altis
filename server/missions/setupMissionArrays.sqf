@@ -18,6 +18,7 @@ MainMissions =
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
 	["mission_CivHeli", 1]
+	
 ];
 
 SideMissions =
@@ -37,7 +38,8 @@ SideMissions =
 MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
-	["mission_SunkenTreasure", .5]
+	["mission_SunkenTreasure", .5],
+	["mission_altisPatrol", .5]
 ];
 
 ExtraMissions =
