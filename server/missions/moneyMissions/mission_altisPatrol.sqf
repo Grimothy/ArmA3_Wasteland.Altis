@@ -162,7 +162,6 @@ _successExec =
     [_box3,"mission_Main_A3snipers"] call fn_refillbox;
 	_box3 allowDamage false;
 	
-	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2, _box3];
 	_box4 = "B_supplyCrate_F" createVehicle getMarkerPos _marker;
     [_box4,"ammo_drop"] call fn_refillbox;
 	_box4 allowDamage false;
