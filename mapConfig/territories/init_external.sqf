@@ -10,3 +10,4 @@
 #include "09_panochori.sqf";
 #include "10_Skopos.sqf";
 #include "11_SelakanoCoast.sqf";
+#include "12_Altis_West.sqf";

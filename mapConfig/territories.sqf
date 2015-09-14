@@ -52,6 +52,10 @@
 	["TERRITORY_11_Selakano_Coast_A", "SELAKANO COAST (A)", 7000],
 	["TERRITORY_11_Selakano_Coast_B", "SELAKANO COAST (B)", 7000],
 	["TERRITORY_11_Selakano_Coast_C", "SELAKANO COAST (C)", 7000],
-	["TERRITORY_11_Selakano_Coast_D", "SELAKANO COAST (D)", 7000]
+	["TERRITORY_11_Selakano_Coast_D", "SELAKANO COAST (D)", 7000],
+	["TERRITORY_12_Ifestonia", "Ifestonia", 6000],
+	["TERRITORY_12_Orino", "Orino", 6000],
+	["TERRITORY_12_Galati", "Galati", 6000],
+	["TERRITORY_12_Syrta", "Syrta", 6000]
 	
 ]
