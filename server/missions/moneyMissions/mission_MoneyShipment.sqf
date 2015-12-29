@@ -5,7 +5,7 @@
 //	@file Name: mission_MoneyShipment.sqf
 //	@file Author: JoSchaap / routes by Del1te - (original idea by Sanjo), AgentRev
 //	@file Created: 31/08/2013 18:19
-
+//25% REDUCTION
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
@@ -25,7 +25,7 @@ _setupVars =
 		// Easy
 		[
 			"Small Money Shipment", // Marker text
-			40000, // Money
+			30000, // Money
 			[
 				[ // NATO convoy
 					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"], // Veh 1
@@ -44,7 +44,7 @@ _setupVars =
 		// Medium
 		[
 			"Medium Money Shipment", // Marker text
-			65000, // Money
+			48750, // Money
 			[
 				[ // NATO convoy
 					["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"], // Veh 1
@@ -66,7 +66,7 @@ _setupVars =
 		// Hard
 		[
 			"Large Money Shipment", // Marker text
-			85000, // Money
+			63750, // Money
 			[
 				[ // NATO convoy
 					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F"], // Veh 1
@@ -88,7 +88,7 @@ _setupVars =
 		// Extreme
 		[
 			"Heavy Money Shipment", // Marker text
-			115000, // Money
+			86250, // Money
 			[
 				[ // NATO convoy
 					["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F", "B_APC_Tracked_01_AA_F", "B_MBT_01_cannon_F", "B_MBT_01_TUSK_F"], // Veh 1

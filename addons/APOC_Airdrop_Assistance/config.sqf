@@ -1,7 +1,7 @@
 //Configuration for Airdrop Assistance
 //Author: Apoc
 
-APOC_AA_coolDownTime = 60; //Expressed in sec
+APOC_AA_coolDownTime = 90; //Expressed in sec
 
 APOC_AA_VehOptions =
 [
@@ -19,15 +19,15 @@ APOC_AA_VehOptions =
 APOC_AA_SupOptions =
 [
 
-	["Launchers","mission_USLaunchers",25000,"supply"],
+	//["Launchers","mission_USLaunchers",25000,"supply"],
 	["Assault Rifle","mission_USSpecial",10000, "supply"],
 	["Sniper Rifles","airdrop_Snipers",25000,"supply"],
 	["DLC Rifles","airdrop_DLC_Rifles",35000,"supply"],
 	["DLC LMGs","airdrop_DLC_LMGs",35000,"supply"],
-	["Launchers Tier 2","Launcers_Tier_2",50000,"supply"],
-	["Group Elite Crate","GEVP",165000,"supply"],
+	//["Launchers Tier 2","Launcers_Tier_2",50000,"supply"],
+	//["Group Elite Crate","GEVP",165000,"supply"],
 	//["Group Elite Crate Lite","GEVPL",80000,"Supply"],
-	["Ammo Crate", "Ammo_Drop",75000,"supply"],
+	//["Ammo Crate", "Ammo_Drop",75000,"supply"],
 	["Food","Land_Sacks_goods_F",5000,"picnic"],
 	["Water","Land_BarrelWater_F",5000,"picnic"]
 ];

@@ -659,38 +659,38 @@ landArray = compileFinal str
 	["SUV", "C_SUV_01_F", 1100, "vehicle"],
 	["Offroad", "C_Offroad_01_F", 1100, "vehicle"],
 	["Offroad Camo", "B_G_Offroad_01_F", 1250, "vehicle"],
-	["Offroad Repair", "C_Offroad_01_repair_F", 1500, "vehicle"],
-	["Offroad HMG", "B_G_Offroad_01_armed_F", 2500, "vehicle"],
+	//["Offroad Repair", "C_Offroad_01_repair_F", 1500, "vehicle"],
+	//["Offroad HMG", "B_G_Offroad_01_armed_F", 2500, "vehicle"],
 
 	["Truck", "C_Van_01_transport_F", 700, "vehicle"],
 	["Truck (Camo)", "B_G_Van_01_transport_F", 800, "vehicle"],
 	["Truck Box", "C_Van_01_box_F", 900, "vehicle"],
-	["Fuel Truck", "C_Van_01_fuel_F", 2000, "vehicle"],
-	["Fuel Truck (Camo)", "B_G_Van_01_fuel_F", 2100, "vehicle"],
+	//["Fuel Truck", "C_Van_01_fuel_F", 2000, "vehicle"],
+	//["Fuel Truck (Camo)", "B_G_Van_01_fuel_F", 2100, "vehicle"],
 
 	["HEMTT Tractor", "B_Truck_01_mover_F", 4000, "vehicle"],
 	["HEMTT Box", "B_Truck_01_box_F", 5000, "vehicle"],
 	["HEMTT Transport", "B_Truck_01_transport_F", 6000, "vehicle"],
 	["HEMTT Covered", "B_Truck_01_covered_F", 7500, "vehicle"],
-	["HEMTT Fuel", "B_Truck_01_fuel_F", 9000, "vehicle"],
+	//["HEMTT Fuel", "B_Truck_01_fuel_F", 9000, "vehicle"],
 	["HEMTT Medical", "B_Truck_01_medical_F", 10000, "vehicle"],
-	["HEMTT Repair", "B_Truck_01_Repair_F", 12500, "vehicle"],
-	["HEMTT Ammo", "B_Truck_01_ammo_F", 150000, "vehicle"],
+	//["HEMTT Repair", "B_Truck_01_Repair_F", 12500, "vehicle"],
+	//["HEMTT Ammo", "B_Truck_01_ammo_F", 150000, "vehicle"],
 
 	["Tempest Device", "O_Truck_03_device_F", 4000, "vehicle"],
 	["Tempest Transport", "O_Truck_03_transport_F", 6000, "vehicle"],
 	["Tempest Covered", "O_Truck_03_covered_F", 7500, "vehicle"],
-	["Tempest Fuel", "O_Truck_03_fuel_F", 9000, "vehicle"],
+	//["Tempest Fuel", "O_Truck_03_fuel_F", 9000, "vehicle"],
 	["Tempest Medical", "O_Truck_03_medical_F", 10000, "vehicle"],
-	["Tempest Repair", "O_Truck_03_repair_F", 12500, "vehicle"],
-	["Tempest Ammo", "O_Truck_03_ammo_F", 150000, "vehicle"],
+	//["Tempest Repair", "O_Truck_03_repair_F", 12500, "vehicle"],
+	//["Tempest Ammo", "O_Truck_03_ammo_F", 150000, "vehicle"],
 
 	["Zamak Transport", "I_Truck_02_transport_F", 4000, "vehicle"],
 	["Zamak Covered", "I_Truck_02_covered_F", 5000, "vehicle"],
-	["Zamak Fuel", "I_Truck_02_fuel_F", 7500, "vehicle"],
-	["Zamak Medical", "I_Truck_02_medical_F", 9000, "vehicle"],
-	["Zamak Repair", "I_Truck_02_box_F", 10000, "vehicle"],
-	["Zamak Ammo", "I_Truck_02_ammo_F", 150000, "vehicle"],
+	//["Zamak Fuel", "I_Truck_02_fuel_F", 7500, "vehicle"],
+	//["Zamak Medical", "I_Truck_02_medical_F", 9000, "vehicle"],
+	//["Zamak Repair", "I_Truck_02_box_F", 10000, "vehicle"],
+	//["Zamak Ammo", "I_Truck_02_ammo_F", 150000, "vehicle"],
 
 	["UGV Stomper (NATO)", "B_UGV_01_F", 2500, "vehicle"],
 	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 15000, "vehicle"],
@@ -740,26 +740,26 @@ helicoptersArray = compileFinal str
 
 	["Mi-290 Taru (Crane) [DLC]", "O_Heli_Transport_04_F", 7500, "vehicle"], // CH-54
 	["Mi-290 Taru (Box) [DLC]", "O_Heli_Transport_04_box_F", 8000, "vehicle"],
-	["Mi-290 Taru (Fuel) [DLC]", "O_Heli_Transport_04_fuel_F", 8500, "vehicle"],
+	//["Mi-290 Taru (Fuel) [DLC]", "O_Heli_Transport_04_fuel_F", 8500, "vehicle"],
 	["Mi-290 Taru (Bench) [DLC]", "O_Heli_Transport_04_bench_F", 9000, "vehicle"],
 	["Mi-290 Taru (Transport) [DLC]", "O_Heli_Transport_04_covered_F", 9500, "vehicle"],
 	["CH-67 Huron (Black) [DLC]", "B_Heli_Transport_03_unarmed_F", 10000, "vehicle"], // CH-47
 	["CH-49 Mohawk", "I_Heli_Transport_02_F", 10000, "vehicle"], // AW101
 
-	["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
-	["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 150000, "vehicle"],
-	["Mi-290 Taru (Ammo) [DLC]", "O_Heli_Transport_04_ammo_F", 250000, "vehicle"],
+	//["Mi-290 Taru (Medical) [DLC]", "O_Heli_Transport_04_medevac_F",12500, "vehicle"],
+	//["Mi-290 Taru (Repair) [DLC]", "O_Heli_Transport_04_repair_F", 150000, "vehicle"],
+	//["Mi-290 Taru (Ammo) [DLC]", "O_Heli_Transport_04_ammo_F", 250000, "vehicle"],
 
 	["UH-80 Ghost Hawk (Black)", "B_Heli_Transport_01_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns
 	["UH-80 Ghost Hawk (Green)", "B_Heli_Transport_01_camo_F", 25000, "vehicle"], // UH-60 Stealth with 2 side miniguns (green camo)
 	["CH-67 Huron (Armed) [DLC]", "B_Heli_Transport_03_F", 30000, "vehicle"], // CH-47 with 2 side miniguns
 	["AH-9 Pawnee", "B_Heli_Light_01_armed_F", 30000, "vehicle"], // Armed AH-6
 	["PO-30 Orca (Armed, Black)", "O_Heli_Light_02_v2_F", 30000, "vehicle"], // Armed Ka-60 with orca paintjob
-	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 35000, "vehicle"], // Armed Ka-60
-	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"], // Armed AW159
-	["AH-99 Blackfoot", "B_Heli_Attack_01_F", 85000, "vehicle"], // RAH-66 with gunner
-	["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 60000, "vehicle"], // Mi-28 with gunner
-	["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 60000, "vehicle"] // Mi-28 with gunner (black camo)
+	["PO-30 Orca (Armed, Hex)", "O_Heli_Light_02_F", 55000, "vehicle"], // Armed Ka-60
+	["WY-55 Hellcat (Armed)", "I_Heli_light_03_F", 40000, "vehicle"] // Armed AW159
+	//["AH-99 Blackfoot", "B_Heli_Attack_01_F", 85000, "vehicle"], // RAH-66 with gunner
+	//["Mi-48 Kajman (Hex)", "O_Heli_Attack_02_F", 60000, "vehicle"], // Mi-28 with gunner
+	//["Mi-48 Kajman (Black)", "O_Heli_Attack_02_black_F", 60000, "vehicle"] // Mi-28 with gunner (black camo)
 ];
 
 planesArray = compileFinal str

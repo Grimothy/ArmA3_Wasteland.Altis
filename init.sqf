@@ -96,7 +96,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
-	[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
+	//[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
 	//[] execVM "VCOMAI\init.sqf";
