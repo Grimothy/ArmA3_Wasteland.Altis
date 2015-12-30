@@ -5,10 +5,14 @@
 //	@file Author: AgentRev
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 private ["_corpse", "_veh", "_pos", "_vehSize", "_targetPos"];
 =======
 private ["_corpse", "_veh", "_firstVeh", "_pos", "_targetPos"];
 >>>>>>> fef9664... Optimized player item drop and corpse ejection
+=======
+private ["_corpse", "_veh", "_pos", "_targetPos"];
+>>>>>>> 88fe60c... Optimized player item drop and corpse ejection again
 _corpse = _this;
 _veh = vehicle _corpse;
 
@@ -24,7 +28,8 @@ waitUntil
 =======
 
 	// apparently, if the corpse is stuck in a vehicle wreck, "vehicle _corpse" returns the corpse itself, hence why the workaround below is needed; as usual, thanks BIS for breaking stuff all the time!!!!!!!!
-	_veh = if (_corpse in crew _firstVeh) then { _firstVeh } else { vehicle _corpse };
+	_veh = objectParent _corpse;
+	if (isNull _veh) then { _veh = _corpse };
 
 >>>>>>> fef9664... Optimized player item drop and corpse ejection
 	_pos = getPos _veh;
