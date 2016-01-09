@@ -5,6 +5,12 @@
 //	Beschreibung: Random Weather Script - What else can i say?
 //::::::::::::  ::::::::::::\\
 
+//Defines
+//Nebel 	= fog
+//Wellen	= waves
+//Vorschau	= preview
+//Regen		= rain
+
 	private ["_fnc_D41_WetterWerte"];
 
 	D41_Nebel = [0,0,0];
