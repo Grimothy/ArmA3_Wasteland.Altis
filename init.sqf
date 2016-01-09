@@ -22,6 +22,9 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 
+//enable weather script
+[] execVM "addons\scripts\D41_wetter.sqf";
+
 // versionName = ""; // Set in STR_WL_WelcomeToWasteland in stringtable.xml
 
 if (isServer) then { X_Server = true };
@@ -86,20 +89,24 @@ if (hasInterface || isServer) then
 	//init 3rd Party Scripts
 	if (isServer) then {call compile preprocessFile "addons\scripts\initBuildings.sqf";};
 	[] execVM "addons\R3F_LOG\init.sqf";
-	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
 	[] execVM "addons\lsd_nvg\init.sqf";
-	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
 	[] execVM "addons\laptop\init.sqf";
 	[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
-	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
-	//[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
-	//[] execVM "VCOMAI\init.sqf";
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";          // Keypad for base locking
+
+	//DISABLED ITEMS
+	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
+	//[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
+	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
+	//[] execVM "addons\HvT\HvT.sqf"; 	// High Value Target
+	//[] execVM "VCOMAI\init.sqf";
+	
 };
+
 
