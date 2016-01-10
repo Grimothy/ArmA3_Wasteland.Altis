@@ -90,6 +90,7 @@ class CfgNotifications
 
 class params
 {
+
 	//class marker3D
 	//{
 		//title = "3D markers";
@@ -99,6 +100,17 @@ class params
 		//isGlobal = 1;		
 		//file = "addons\3D_Markers\3Dmarkers.sqf";
 	//};
+
+	class Functions
+	{
+		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
+		#include "client\CfgRemoteExec_fnc.hpp"
+	};
+	class Commands
+	{
+		mode = 1;
+	};
+
 };
 
 #include "addons\APOC_Property_Manager\APOC_PM_Defines.hpp"
