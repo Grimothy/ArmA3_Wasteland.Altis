@@ -49,5 +49,4 @@ _mags = [];
 		_x set [1, 0];
 	};
 } forEach _mags;
-
 _mags

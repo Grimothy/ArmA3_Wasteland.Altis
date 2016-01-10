@@ -12,10 +12,10 @@ if (!isServer) exitWith {};
 scopeName "spawnStoreObject";
 private ["_player", "_class", "_marker", "_key", "_isGenStore", "_isGunStore", "_isVehStore", "_timeoutKey", "_objectID", "_playerSide", "_objectsArray", "_itemEntry", "_itemPrice", "_safePos", "_object"];
 
-_player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_class = [_this, 1, "", [""]] call BIS_fnc_param;
-_marker = [_this, 2, "", [""]] call BIS_fnc_param;
-_key = [_this, 3, "", [""]] call BIS_fnc_param;
+_player = param [0, objNull, [objNull]];
+_class = param [1, "", [""]];
+_marker = param [2, "", [""]];
+_key = param [3, "", [""]];
 
 _isGenStore = ["GenStore", _marker] call fn_startsWith;
 _isGunStore = ["GunStore", _marker] call fn_startsWith;
@@ -129,8 +129,8 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
-
 			_object setVariable ["R3F_LOG_Disabled", false, true];
+
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
 				//assign AI to the vehicle so it can actually be used
@@ -151,6 +151,19 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					} forEach crew _veh;
 				};
 			};
+			
+			/*if (_class isKindOf "Plane") then
+			{
+				{
+					if (["CMFlare", _x] call fn_findString != -1) then
+					{
+						_object removeMagazinesTurret [_x, [-1]];
+					};
+				} forEach getArray (configFile >> "CfgVehicles" >> _class >> "magazines");
+
+				_object addMagazineTurret ["120Rnd_CMFlare_Chaff_Magazine", [-1]];
+				_object addMagazineTurret ["120Rnd_CMFlareMagazine", [-1]]; // TEST
+			};*/
 
 			if (isPlayer _player && !(_player getVariable [_timeoutKey, true])) then
 			{
@@ -166,24 +179,45 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			{
 				_object setPosATL [_safePos select 0, _safePos select 1, 0.05];
 				_object setVelocity [0,0,0.01];
+				// _object spawn cleanVehicleWreck;
+				_object setVariable ["A3W_purchasedVehicle", true, true];
+			};
+
+			if (_object isKindOf "AllVehicles" && !({_object isKindOf _x} count ["StaticWeapon","UAV_02_base_F","UGV_01_base_F"] > 0)) then
+			{
 				_object engineOn true; // Lets already turn the engine one to see if it fixes exploding vehicles.
 				_object lock 2; // Spawn vehicles in locked
 				_object setVariable ["R3F_LOG_disabled", true, true]; // Spawn vehicles in locked
-				// _object spawn cleanVehicleWreck;
-				_object setVariable ["A3W_purchasedVehicle", true, true];
-				_object setVariable ["R3F_LOG_Disabled", false, true];
 			};
 
 			_object setDir (if (_object isKindOf "Plane") then { markerDir _marker } else { random 360 });
 
-			_isDamageable = !(_object isKindOf "ReammoBox_F"); // ({_object isKindOf _x} count ["AllVehicles", "Lamps_base_F", "Cargo_Patrol_base_F", "Cargo_Tower_base_F"] > 0);
+			_isDamageable = !(_object isKindOf "ReammoBox_F");// || _object isKindOf "Land_InfoStand_V2_F"); // ({_object isKindOf _x} count ["AllVehicles", "Lamps_base_F", "Cargo_Patrol_base_F", "Cargo_Tower_base_F"] > 0);
 
 			[_object, false] call vehicleSetup;
 			_object allowDamage _isDamageable;
-			_object setVariable ["allowDamage", _isDamageable];
+			_object setVariable ["allowDamage", _isDamageable, true];
 
 			switch (true) do
 			{
+				// Add default password to baselocker, safe and doorlocks.
+				case ({_object isKindOf _x} count ["Land_InfoStand_V2_F", "Land_Device_assembled_F", "Box_NATO_AmmoVeh_F"] > 0):
+				{
+					_object setVariable ["password", "0000", true];
+				};
+
+				// Add food to bought food sacks.
+				case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
+				{
+					_object setVariable ["food", 50, true];
+				};
+				
+				// Add water to bought water barrels.
+				case ({_object isKindOf _x} count ["Land_BarrelWater_F"] > 0):
+				{
+					_object setVariable ["water", 50, true];
+				};
+
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
 					_object setAmmoCargo 5;
@@ -222,6 +256,21 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				case ({_object isKindOf _x} count ["B_Truck_01_Repair_F", "O_Truck_02_box_F", "O_Truck_03_repair_F", "I_Truck_02_box_F"] > 0):
 				{
 					_object setRepairCargo 25;
+				};
+				
+				case ({_object isKindOf _x} count ["Land_CargoBox_V1_F"] > 0):
+				{
+						[_object, [["Land_Canal_Wall_Stairs_F", 2],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrier_3_F", 4],["Land_Canal_WallSmall_10m_F", 6],["Land_LampShabby_F", 10], ["Land_RampConcrete_F",1],["Land_Crash_barrier_F",4],["B_HMG_01_high_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo20_yellow_F"] > 0):
+				{
+						[_object, ["Land_Cargo_Tower_V1_F", ["Land_Canal_Wall_Stairs_F", 4],["Land_BarGate_F", 2],["Land_Cargo_Patrol_V1_F", 2],["Land_HBarrierWall6_F", 4],["Land_Canal_WallSmall_10m_F", 10],["Land_LampShabby_F", 10], ["Land_RampConcreteHigh_F",2], ["Land_RampConcrete_F", 2],["Land_Crash_barrier_F",6],["B_HMG_01_high_F",2]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
+				};
+				
+				case ({_object isKindOf _x} count ["Land_Cargo40_white_F"] > 0):
+				{
+						[_object, [["Land_Cargo_Tower_V1_F",2],["Land_GH_Platform_F",10],["Land_Canal_Wall_Stairs_F", 10],["Land_BarGate_F", 4],["Land_Cargo_Patrol_V1_F", 4],["Land_HBarrierWall6_F", 10],["Land_Canal_WallSmall_10m_F", 20],["Land_LampHalogen_F", 10], ["Land_RampConcreteHigh_F",4], ["Land_RampConcrete_F", 4],["Land_Crash_barrier_F",6],["B_GMG_01_F",2],["B_static_AA_F",2],["B_static_AT_F",2],["B_Quadbike_01_F",4],["C_Heli_light_01_digital_F",1]] ] execVM "addons\R3F_LOG\auto_load_in_vehicle.sqf";
 				};
 			};
 
