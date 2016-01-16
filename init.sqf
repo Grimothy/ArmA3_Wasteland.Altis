@@ -100,11 +100,12 @@ if (hasInterface || isServer) then
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
 	[] execVM "addons\laptop\init.sqf";
-	[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+	[] execVM "addons\vactions\functions.sqf";					// Micovery vehicle actions
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
-	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";          // Keypad for base locking
+	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
+	nul = [] execVM "addons\3D_Markers\3Dmarkers.sqf";			//	
 
 	//DISABLED ITEMS
 	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
