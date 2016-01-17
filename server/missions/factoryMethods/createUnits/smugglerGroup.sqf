@@ -15,7 +15,7 @@ _pos = _this select 1;
 _leader = _group createUnit ["C_man_polo_1_F", [(_pos select 0) + 10, _pos select 1, 0], [], 1, "Form"];
 _leader addUniform "U_IG_leader";
 _leader addVest "V_TacVestIR_blk";
-_leader addBackpack "B_AssaultPack_blk;
+_leader addBackpack "B_AssaultPack_blk";
 _leader addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 _leader addWeapon "arifle_MX_SW_Hamr_pointer_F";
 _leader addPrimaryWeaponItem "optic_Holosight";
