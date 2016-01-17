@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-private ["_group", "_pos", "_leader", "_man2", "_man3", "_man4", "_man5", "_man6"];
+private ["_group", "_pos", "_leader", "_man2", "_man3", "_man4", "_man5", "_man6", "_man7"];
 
 _group = _this select 0;
 _pos = _this select 1;
@@ -61,13 +61,12 @@ _man3 addGoggles "G_Balaclava_blk";
 // Soldier4
 _man4 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
 removeAllAssignedItems _man4;
-_man4 addUniform "U_B_CTRG_1";
+_man4 addUniform "U_BG_Guerilla3_1";
 _man4 addVest "V_HarnessOSpec_brn";
-_man4 addMagazine "10Rnd_762x51_Mag";
-_man4 addWeapon "srifle_DMR_01_F";
-_man4 addPrimaryWeaponItem "optic_Holosight";
-_man4 addMagazine "10Rnd_762x51_Mag";
-_man4 addMagazine "10Rnd_762x51_Mag";
+_man4 addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+_man4 addWeapon "arifle_MX_Hamr_pointer_F";
+_man4 addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+_man4 addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 _man4 addHeadgear "H_Booniehat_mcamo";
 _man4 addGoggles "G_Balaclava_blk";
 
@@ -75,28 +74,46 @@ _man4 addGoggles "G_Balaclava_blk";
 // Soldier5
 _man5 = _group createUnit ["C_man_polo_5_F", [_pos select 0, (_pos select 1) + 40, 0], [], 1, "Form"];
 removeAllAssignedItems _man5;
-_man5 addUniform "U_B_CTRG_1";
+_man5 addUniform "U_OG_Guerilla2_3";
 _man5 addVest "V_HarnessOSpec_brn";
-_man5 addMagazine "10Rnd_762x51_Mag";
-_man5 addWeapon "srifle_DMR_01_F";
-_man5 addPrimaryWeaponItem "optic_Holosight";
-_man5 addMagazine "10Rnd_762x51_Mag";
-_man5 addMagazine "10Rnd_762x51_Mag";
+_man5 addBackpack "B_FieldPack_ocamo";
+_man5 addMagazine "30Rnd_65x39_caseless_greeng";
+_man5 addWeapon "arifle_Katiba_C_ACO_pointer_F";
+_man5 addMagazine "30Rnd_65x39_caseless_green";
+_man5 addMagazine "Titan_AT";
+_man5 addWeapon "launch_I_Titan_short_F";
+_man5 addMagazine "Titan_AT";
 _man5 addHeadgear "H_Booniehat_mcamo";
 _man5 addGoggles "G_Balaclava_blk";
+_man5 selectWeapon "launch_I_Titan_short_F";
 
 
 // Soldier6
 _man6 = _group createUnit ["C_man_polo_4_F", [_pos select 0, (_pos select 1) - 30, 0], [], 1, "Form"];
 removeAllAssignedItems _man6;
-_man6 addUniform "U_B_CTRG_1";
+_man6 addUniform "U_OG_Guerilla1_1";
 _man6 addVest "V_HarnessOSpec_brn";
-_man6 addWeapon "srifle_DMR_01_F";
-_man6 addPrimaryWeaponItem "optic_Holosight";
-_man6 addMagazine "10Rnd_762x51_Mag";
-_man6 addMagazine "10Rnd_762x51_Mag";
+_man6 addWeapon "LMG_Mk200_MRCO_F";
+_man6 addMagazine "200Rnd_65x39_cased_Box_Tracer";
+_man6 addMagazine "200Rnd_65x39_cased_Box_Tracer";
 _man6 addHeadgear "H_Booniehat_mcamo";
 _man6 addGoggles "G_Balaclava_blk";
+
+//AA Defender
+_man7 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) + 30, 0], [], 1, "Form"];
+_man7 addUniform "U_OG_Guerilla1_1";
+_man7 addVest "V_HarnessOSpec_brn";
+_man7 addBackpack "B_Carryall_oli";
+_man7 addMagazine "10Rnd_762x51_Mag";
+_man7 addWeapon "srifle_DMR_01_F";
+_man7 addPrimaryWeaponItem "optic_Holosight";
+_man7 addMagazine "10Rnd_762x51_Mag";
+_man7 addMagazine "10Rnd_762x51_Mag";
+_man7 addMagazine "Titan_AA";
+_man7 addWeapon "launch_I_Titan_F";
+_man7 addMagazine "Titan_AA";
+_man7 addMagazine "Titan_AA";
+_man7 selectWeapon "launch_I_Titan_F";
 
 
 _leader = leader _group;
