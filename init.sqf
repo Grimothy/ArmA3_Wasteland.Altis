@@ -106,13 +106,14 @@ if (hasInterface || isServer) then
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
 	nul = [] execVM "addons\3D_Markers\3Dmarkers.sqf";			//	
+	[] execVM "VCOMAI\init.sqf";
 
 	//DISABLED ITEMS
 	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	//[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	//[] execVM "addons\HvT\HvT.sqf"; 	// High Value Target
-	//[] execVM "VCOMAI\init.sqf";
+	
 	
 };
 
