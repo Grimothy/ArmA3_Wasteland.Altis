@@ -23,7 +23,7 @@ MainMissions =
 
 SideMissions =
 [
-	["mission_HostileHelicopter", 0.5],
+	["mission_HostileHelicopter", 1],
 	["mission_MiniConvoy", 1],
 	//["mission_SunkenSupplies", 1],
 	["mission_TownInvasion", 1],
