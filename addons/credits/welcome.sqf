@@ -8,7 +8,7 @@ _onScreenTime = 20;
 sleep 90;
 
 _role1 = "Welcome to Ultra A3wasteland";
-_role1names = ["Server Hosted in Dallas"];
+_role1names = ["Server Hosted in Canada"];
 _role2 = "Please report hackers to";
 _role2names = ["Ftnwo.clan@gmail.com"];
 _role3 = "Supported Mods";

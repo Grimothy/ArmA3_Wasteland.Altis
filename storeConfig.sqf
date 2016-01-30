@@ -109,11 +109,11 @@ launcherArray = compileFinal str
 	["RPG-42 Alamut", "launch_RPG32_F", 400],
 	["PCML", "launch_NLAW_F", 1500],
 	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 3000],
-	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 2000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 2000],
-	["Titan MPRL AA (Desert)", "launch_Titan_F", 2000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 2000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 2000]
+	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 3000],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 3000],
+	["Titan MPRL AA (Desert)", "launch_Titan_F", 3000],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 3000],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 3000]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call launcherArray);
@@ -212,10 +212,10 @@ ammoArray = compileFinal str
 	["12.7mm 10Rnd Subsonic Mag", "10Rnd_127x54_Mag", 75],
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 250],              // Direct damage: high      | Splash damage: low    | Guidance: none
 	["RPG-42 High-Explosive Rocket", "RPG32_HE_F", 250],      // Direct damage: medium    | Splash damage: medium | Guidance: none
-	["PCML Anti-Tank Missile", "NLAW_F", 400],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
-	["Titan Anti-Tank Missile", "Titan_AT", 550],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
-	["Titan Anti-Personnel Missile", "Titan_AP", 450],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
-	["Titan Anti-Air Missile", "Titan_AA", 750],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
+	["PCML Anti-Tank Missile", "NLAW_F", 500],                // Direct damage: very high | Splash damage: low    | Guidance: laser, ground vehicles
+	["Titan Anti-Tank Missile", "Titan_AT", 1000],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
+	["Titan Anti-Personnel Missile", "Titan_AP", 1000],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
+	["Titan Anti-Air Missile", "Titan_AA", 1000],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
 	["40mm 3Rnd HE Grenades", "3Rnd_HE_Grenade_shell", 250],
 	["40mm Smoke Round (White)", "1Rnd_Smoke_Grenade_shell", 50],
@@ -603,10 +603,10 @@ genObjectsArray = compileFinal str
 	["Empty Ammo Crate", "Box_NATO_Ammo_F", 650, "ammocrate"],
 	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
-	["Lamp Post (Harbour)", "Land_LampHarbour_F", 450, "object"],
-	["Lamp Post (Shabby)", "Land_LampShabby_F", 450, "object"],
+	//["Lamp Post (Harbour)", "Land_LampHarbour_F", 450, "object"],
+	//["Lamp Post (Shabby)", "Land_LampShabby_F", 450, "object"],
 	["Boom Gate", "Land_BarGate_F", 450, "object"],
-	["Pipes", "Land_Pipes_Large_F", 250, "object"],
+	//["Pipes", "Land_Pipes_Large_F", 250, "object"],
 	["Concrete Frame", "Land_CncShelter_F", 350, "object"],
 	["Highway Guardrail", "Land_Crash_barrier_F", 250, "object"],
 	["Concrete Barrier", "Land_CncBarrier_F", 450, "object"],

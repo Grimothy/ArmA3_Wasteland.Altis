@@ -6,7 +6,13 @@
 //	@file Author: [404] Deadbeat, [GoT] JoSchaap, AgentRev
 //	@file Description: The main init.
 
+#include "debugFlag.hpp"
+
+#ifdef A3W_DEBUG
+#define DEBUG true
+#else
 #define DEBUG false
+#endif
 
 enableSaving [false, false];
 
@@ -94,18 +100,20 @@ if (hasInterface || isServer) then
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
 	[] execVM "addons\laptop\init.sqf";
-	[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+	[] execVM "addons\vactions\functions.sqf";					// Micovery vehicle actions
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";
 	[] execVM "addons\credits\welcome.sqf"; //credits ftw
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
-	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";          // Keypad for base locking
+	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
+	//nul = [] execVM "addons\3D_Markers\3Dmarkers.sqf";			//	
+	[] execVM "VCOMAI\init.sqf";
 
 	//DISABLED ITEMS
 	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 	//[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
 	//if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 	//[] execVM "addons\HvT\HvT.sqf"; 	// High Value Target
-	//[] execVM "VCOMAI\init.sqf";
+	
 	
 };
 
