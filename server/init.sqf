@@ -416,7 +416,7 @@ if (isNil "A3W_savingMethod") then
 	A3W_savingMethod = compileFinal "'none'";
 	publicVariable "A3W_savingMethod";
 };
-
+call compile preprocessFileLineNumbers "mapconfig\setupStoreOwners.sqf"; //Cael817, moved stores and markers from mission.sqm
 call compile preprocessFileLineNumbers "server\missions\setupMissionArrays.sqf";
 call compile preprocessFileLineNumbers "server\functions\createTownMarkers.sqf";
 
