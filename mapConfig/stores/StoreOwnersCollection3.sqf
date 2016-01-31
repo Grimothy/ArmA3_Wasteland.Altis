@@ -17,7 +17,6 @@ private["_generalStores", "_gunStores", "_vehicleStores"];
 //		1.0 NPC weapon assignment
 //		1.1 NPC uniform assignment
 
-// Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 _generalStores =
 [
 	[[1, 215, [], [8663.9717,18241.66,0], [8656.6396,18249.031,183.44957]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_2"]]],
