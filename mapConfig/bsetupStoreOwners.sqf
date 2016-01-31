@@ -8,12 +8,12 @@
 _debug = false;
 _grp = createGroup sideLogic;
 
-//General store 1
+//Generalstore 1
 _name = "GenStore1";
-_pos = [3366.886,13206.772,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [11533.004,9433.5479,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [3361.3064,13215.17,2.4381764];
+_pos = [11541.983,9443.0586,19.547377];
 _object = createMarker ["GenStore1_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GenStore1_objSpawn";
@@ -25,12 +25,12 @@ If (_debug) then {
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
 
-//General store 2
+//Generalstore 2
 _name = "GenStore2";
-_pos = [16708.83,12779.239, 0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [20786.578,6807.8887,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [16717.84,12775.421,0];
+_pos = [20795.758,6811.291,0];
 _object = createMarker ["GenStore2_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GenStore2_objSpawn";
@@ -42,15 +42,15 @@ If (_debug) then {
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
 
-//Genstore 3
+//Generalstore 3
 _name = "GenStore3";
-_pos = [25786.891,21354.854,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [18087.299,15245.804,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [25778.363,21368.246,20.712324];
+_pos = [18097.91,15254.862,0];
 _object = createMarker ["GenStore3_objSpawn", _pos];
 _object setMarkerShape "ICON";
-_object setMarkerText "GenStore3_objSpawn";
+_object setMarkerText "GenStore4_objSpawn";
 If (_debug) then {
 	_object setMarkertype "mil_warning";
 }else{
@@ -59,12 +59,12 @@ If (_debug) then {
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
 
-//Genstore 4
+//Generalstore 4
 _name = "GenStore4";
-_pos = [9435.292,20267.016,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [9268.7627,15868.939,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [9448.4199,20273.068,125.69973];
+_pos = [9281.6826,15875.171,0];
 _object = createMarker ["GenStore4_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GenStore4_objSpawn";
@@ -76,12 +76,12 @@ If (_debug) then {
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
 
-//Genstore 5
+//Generalstore 5
 _name = "GenStore5";
-_pos = [9079.9619, 7730.4028,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [4565.4165,21384.393,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [9091.502,7717.8047,32.535469];
+_pos = [4572.313,21392.563,299.72269];
 _object = createMarker ["GenStore5_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GenStore5_objSpawn";
@@ -93,13 +93,12 @@ If (_debug) then {
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
 
-
 //Gunstore 1
 _name = "GunStore1";
-_pos = [11533.004,9433.5479,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [3366.886,13206.772,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [11541.983,9443.0586,19.547377];
+_pos = [3361.3064,13215.17,2.4381764];
 _object = createMarker ["GunStore1_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GunStore1_objSpawn";
@@ -113,10 +112,10 @@ _object setMarkerDir 0;
 
 //Gunstore 2
 _name = "GunStore2";
-_pos = [20786.578,6807.8887,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [16708.83,12779.239, 0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [20795.758,6811.291,0];
+_pos = [16717.84,12775.421,0];
 _object = createMarker ["GunStore2_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GunStore2_objSpawn";
@@ -130,13 +129,13 @@ _object setMarkerDir 0;
 
 //Gunstore 3
 _name = "GunStore3";
-_pos = [18087.299,15245.804,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [25786.891,21354.854,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [18097.91,15254.862,0];
+_pos = [25778.363,21368.246,20.712324];
 _object = createMarker ["GunStore3_objSpawn", _pos];
 _object setMarkerShape "ICON";
-_object setMarkerText "GunStore4_objSpawn";
+_object setMarkerText "GunStore3_objSpawn";
 If (_debug) then {
 	_object setMarkertype "mil_warning";
 }else{
@@ -147,10 +146,10 @@ _object setMarkerDir 0;
 
 //Gunstore 4
 _name = "GunStore4";
-_pos = [9268.7627,15868.939,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+_pos = [9435.292,20267.016,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
 "C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
 
-_pos = [9281.6826,15875.171,0];
+_pos = [9448.4199,20273.068,125.69973];
 _object = createMarker ["GunStore4_objSpawn", _pos];
 _object setMarkerShape "ICON";
 _object setMarkerText "GunStore4_objSpawn";
@@ -161,6 +160,24 @@ If (_debug) then {
 };
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
+
+//Gunstore 5
+_name = "GunStore5";
+_pos = [9079.9619, 7730.4028,0]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
+"C_man_1_1_F" createUnit [_pos, _grp, format ["%1 = this; this setVehicleVarName '%1'; [this] spawn A3W_fnc_setupStoreNPC", _name]];
+
+_pos = [9091.502,7717.8047,32.535469];
+_object = createMarker ["GunStore5_objSpawn", _pos];
+_object setMarkerShape "ICON";
+_object setMarkerText "GunStore5_objSpawn";
+If (_debug) then {
+	_object setMarkertype "mil_warning";
+}else{
+	_object setMarkertype "Empty";
+};
+_object setMarkerColor "ColorBlack";
+_object setMarkerDir 0;
+
 // Vehicle Store 1
 _name = "VehStore1";
 _pos = [26712.592,24601.9,20.398693]; // Always remember, SQM is [X,Z,Y] and SQF needs [X,Y,Z]
@@ -478,4 +495,3 @@ If (_debug) then {
 };
 _object setMarkerColor "ColorBlack";
 _object setMarkerDir 0;
-
