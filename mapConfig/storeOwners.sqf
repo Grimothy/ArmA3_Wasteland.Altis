@@ -3,12 +3,11 @@
 // ******************************************************************************************
 //	@file Name: storeOwners.sqf
 //	@file Author: AgentRev, JoSchaap, His_Shadow
-//	@file Edited By: stoop
+//	@file Edited By: stoop (config arrays are now populated by a factory)
 
-private["_fn_storeOwnersFactory", "_storeOwners"];
+private["_storeOwners"];
 
-_fn_storeOwnersFactory = compile preprocessFileLineNumbers "mapConfig\stores\storeOwnersFactory.sqf";
-_storeOwners = call _fn_storeOwnersFactory;
+_storeOwners = call compile preprocessFileLineNumbers "mapConfig\stores\storeOwnersFactory.sqf";
 
-storeOwnerConfig = compileFinal str _storeOwners select 0;
-storeOwnerConfigAppearance = compileFinal str _storeOwners select 1;
+storeOwnerConfig = compileFinal str (_storeOwners select 0);
+storeOwnerConfigAppearance = compileFinal str (_storeOwners select 1);
