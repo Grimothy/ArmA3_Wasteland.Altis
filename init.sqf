@@ -106,7 +106,7 @@ if (hasInterface || isServer) then
 	if(hasInterface) then{[] execVM "addons\statusBar\statusbar.sqf"};
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
 	//nul = [] execVM "addons\3D_Markers\3Dmarkers.sqf";			//	
-	[] execVM "VCOMAI\init.sqf";
+	
 
 	//DISABLED ITEMS
 	//[] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
