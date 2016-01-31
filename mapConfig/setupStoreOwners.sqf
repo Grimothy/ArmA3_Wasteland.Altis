@@ -75,4 +75,5 @@ _grp = createGroup sideLogic;
 		};
 	};
 	
+	diag_log format ["[Stores Info] setupStoreOwners.sqf: Created store '%1'", _name];
 }foreach (call storeOwnerConfig);
