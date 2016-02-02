@@ -7,7 +7,7 @@ private["_totalStoreCollections", "_collectionId", "_collectionFileName", "_sele
 
 // This number should equal the total number of storeOwnersCollection#.sqf files.
 // Each storeOwnersCollection#.sqf must be sequential starting at 1 (i.e. storeOwnersCollection1.sqf, storeOwnersCollection2.sqf, storeOwnersCollection3.sqf)
-_totalStoreCollections = 2;
+_totalStoreCollections = 6;
 
 //Get random colection Id
 _collectionId = (floor random _totalStoreCollections) + 1;
