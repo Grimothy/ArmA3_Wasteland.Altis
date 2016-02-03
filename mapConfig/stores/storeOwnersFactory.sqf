@@ -3,20 +3,17 @@
 //@file Author: stoop
 //@file Desc: Creates a collection of stores from a collection of store sets
 
-private["_totalStoreCollections", "_collectionId", "_collectionFileName", "_selectedStoreOwnerCollection", "_storeOwnerConfig", "_storeOwnerConfigAppearance", "_fn_GetStoreConfigData"];
+private["_storeOwnerCollections", "_totalStoreCollections", "_collectionId", "_selectedStoreOwnerCollection", "_storeOwnerConfig", "_storeOwnerConfigAppearance", "_fn_GetStoreConfigData"];
 
-// This number should equal the total number of storeOwnersCollection#.sqf files.
-// Each storeOwnersCollection#.sqf must be sequential starting at 1 (i.e. storeOwnersCollection1.sqf, storeOwnersCollection2.sqf, storeOwnersCollection3.sqf)
-_totalStoreCollections = 6;
+//Get store collections
+_storeOwnerCollections = call compile preprocessFileLineNumbers "mapConfig\stores\storeOwnersCollections.sqf";
 
-//Get random colection Id
-_collectionId = (floor random _totalStoreCollections) + 1;
-_collectionFileName = format ["mapConfig\stores\storeOwnersCollection%1.sqf", _collectionId];
-
-//Get randomly selected collection
-diag_log format ["[Stores Info] storeOwnersFactory.sqf: About to load store collection file '%1'", _collectionFileName];
-_selectedStoreOwnerCollection = call compile preprocessFileLineNumbers _collectionFileName;
-diag_log "[Stores Info] storeOwnersFactory.sqf: Successfully loaded store collection file";
+//Select random store collection from the total collections
+_totalStoreCollections = count _storeOwnerCollections;
+diag_log format ["[Stores Info][storeOwnersFactory.sqf] Total store collections found: %1", _totalStoreCollections];
+_collectionId = (floor random _totalStoreCollections);
+diag_log format ["[Stores Info][storeOwnersFactory.sqf] Selected store collection: %1", _collectionId];
+_selectedStoreOwnerCollection = _storeOwnerCollections select _collectionId;
 
 //Build store owners
 _storeOwnerConfig = [];
@@ -40,7 +37,7 @@ _fn_GetStoreConfigData = {
 ["GunStore", _selectedStoreOwnerCollection select 1] call _fn_GetStoreConfigData;
 ["VehStore", _selectedStoreOwnerCollection select 2] call _fn_GetStoreConfigData;
 
-diag_log format ["[Stores Info] storeOwnersFactory.sqf: storeOwnerConfig loaded with array from collection file '%1'", _storeOwnerConfig];
-diag_log format ["[Stores Info] storeOwnersFactory.sqf: storeOwnerConfigAppearance loaded with array from collection file '%1'", _storeOwnerConfigAppearance];
+diag_log format ["[Stores Info][storeOwnersFactory.sqf] variable storeOwnerConfig loaded with array from collection file '%1'", _storeOwnerConfig];
+diag_log format ["[Stores Info][storeOwnersFactory.sqf] variable storeOwnerConfigAppearance loaded with array from collection file '%1'", _storeOwnerConfigAppearance];
 
 [_storeOwnerConfig, _storeOwnerConfigAppearance]
