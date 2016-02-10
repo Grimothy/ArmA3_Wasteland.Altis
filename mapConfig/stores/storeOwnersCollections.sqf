@@ -4,7 +4,13 @@
 //	@file Name: storeOwnersCollections.sqf
 //	@file Author: Stoop
 
-private["_storeOwnersDatabase"];
+private["_storeOwnersCollectionsConfig", "_storeOwnersDatabase"];
+
+_storeOwnersCollectionsConfig = 
+[
+	true,	//Prevent recently loaded collections from being reloaded too soon?
+	2		//If previous value is true, then this is the number of server restarts before a collection can be randomly selected again
+];
 
 // Store array contents are as follows:
 //	0 Store Config Values
@@ -19,7 +25,8 @@ private["_storeOwnersDatabase"];
 
 _storeOwnersDatabase =
 [
-	[	//Stores collection 1
+	[
+		1,	//Collection id
 		[	//General stores
 			[[6, 240, [], [11533.004,9433.5479,0], [11541.983,9443.0586,19.547377]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_2"]]],
 			[[6, 250, [], [20786.578,6807.8887,0], [20795.758,6811.291,0]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_3"]]],
@@ -41,7 +48,8 @@ _storeOwnersDatabase =
 			[[0, 190, ["Planes"], [3971.4854,15072.055,4.7541585],[[3968.136,15051.626,3.2309315],[4001.2522,15050.635,6.2997766],[[4005.88,15046.2,0.00132513],84.0853],[3922.1943,15060.141,0]]], [["weapon", ""], ["uniform", "U_Competitor"]]]
 		]
 	]
-	,[	//Store collection 2
+	,[
+		2,	//Collection id
 		[	//General stores
 			[[1, 0, [], [3366.886,13206.772,0], [3366.886,13206.772,0]], [["weapon", ""], ["uniform", "U_B_SpecopsUniform_sgg"]]],
 			[[1, 75, [], [16708.83,12779.239, 0], [16717.84,12775.421,0]], [["weapon", ""], ["uniform", "U_O_SpecopsUniform_blk"]]],
@@ -63,7 +71,8 @@ _storeOwnersDatabase =
 			[[0, 190, ["Planes"], [3971.4854,15072.055,4.7541585],[[3968.136,15051.626,3.2309315],[4001.2522,15050.635,6.2997766],[[4005.88,15046.2,0.00132513],84.0853],[3922.1943,15060.141,0]]], [["weapon", ""], ["uniform", "U_Competitor"]]]
 		]
 	]
-	,[	//Store collection 3
+	,[
+		3,	//Collection id
 		[	//General stores
 			[[3, 245, [], [8663.9717,18241.66,0], [8656.6396,18249.031,183.44957]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_2"]]],
 			[[4, 320, [], [18753.051,16629.01,0], [18749.602,16642.104,32.972607]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_3"]]],
@@ -83,7 +92,8 @@ _storeOwnersDatabase =
 			[[0, 190, ["Planes"], [3971.4854,15072.055,4.7541585],[[3968.136,15051.626,3.2309315],[4001.2522,15050.635,6.2997766],[[4005.88,15046.2,0.00132513],84.0853],[3922.1943,15060.141,0]]], [["weapon", ""], ["uniform", "U_Competitor"]]]
 		]
 	]
-	,[	//Store collection 4
+	,[
+		4,	//Collection id
 		[	//General stores
 			[[5, 290, [], [14007.719,18629.781,0], [14014.736,18642.689,25.641336]], [["weapon", ""], ["uniform", "U_B_SpecopsUniform_sgg"]]],
 			[[5, 45, [], [27013.463,23239.553,0], [27021.793,23231.338,20.63834]], [["weapon", ""], ["uniform", "U_O_SpecopsUniform_blk"]]],
@@ -103,7 +113,8 @@ _storeOwnersDatabase =
 			[[0, 190, ["Planes"], [3971.4854,15072.055,4.7541585],[[3968.136,15051.626,3.2309315],[4001.2522,15050.635,6.2997766],[[4005.88,15046.2,0.00132513],84.0853],[3922.1943,15060.141,0]]], [["weapon", ""], ["uniform", "U_Competitor"]]]
 		]
 	]
-	,[	//Store collection 5
+	,[
+		5,	//Collection id
 		[	//General stores
 			[[1, 55, [], [19381.2,13260.4,0], [19394.5,13242.2,38.8482]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_2"]]],
 			[[0, 270, [], [12552.9,14433.6,0], [12542.2,14428.4,17.9804]], [["weapon", ""], ["uniform", "U_IG_Guerilla2_3"]]],
@@ -124,7 +135,8 @@ _storeOwnersDatabase =
 			[[0, 190, ["Planes"], [3971.4854,15072.055,4.7541585],[[3968.136,15051.626,3.2309315],[4001.2522,15050.635,6.2997766],[[4005.88,15046.2,0.00132513],84.0853],[3922.1943,15060.141,0]]], [["weapon", ""], ["uniform", "U_Competitor"]]]
 		]
 	]
-	,[	//Store collection 6
+	,[
+		6,	//Collection id
 		[	//General stores
 			[[4, 211, [], [7228.31,16437.2,0], [7219.74,16423.3,115.758]], [["weapon", ""], ["uniform", "U_B_SpecopsUniform_sgg"]]],
 			[[1, 10, [], [16461.5,17215.9,0], [16461.1,17223.7,23.9888]], [["weapon", ""], ["uniform", "U_O_SpecopsUniform_blk"]]],
@@ -147,4 +159,4 @@ _storeOwnersDatabase =
 	]
 ];
 
-_storeOwnersDatabase;
+[_storeOwnersCollectionsConfig, _storeOwnersDatabase]

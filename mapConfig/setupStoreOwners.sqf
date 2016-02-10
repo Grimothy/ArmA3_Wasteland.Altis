@@ -9,6 +9,8 @@
 _debug = false;
 _grp = createGroup sideLogic;
 
+waitUntil {not isNil "storeOwnerConfig"};
+
 {
 	private ["_name", "_storeType", "_storePos", "_spawnPos", "_object"];
 	_name = (_x select 0);
