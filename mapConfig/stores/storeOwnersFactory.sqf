@@ -4,7 +4,7 @@
 //@file Desc: Creates a collection of stores from a collection of store sets
 
 private["_storeOwnersCollectionsFile", "_storeOwnersCollectionsConfig", "_storeOwnersCollections", "_totalStoreCollections", "_randomCollectionPool",
-	"_excludedCollections", "_collectionIndex", "_selectedStoreOwnerCollection", "_storeOwnerConfig", "_storeOwnerConfigAppearance", "_fn_GetStoreConfigData"];
+	"_excludedCollections", "_collectionIndex", "_selectedStoreOwnerCollection", "_storeOwnerConfig", "_storeOwnerConfigAppearance", "_fn_ExcludeCheck", "_fn_GetStoreConfigData"];
 
 //Get store collections
 _storeOwnersCollectionsFile = call compile preprocessFileLineNumbers "mapConfig\stores\storeOwnersCollections.sqf";
@@ -35,10 +35,22 @@ if((count _excludedCollections) > 0) then
 {
 	diag_log format ["[Stores Info][storeOwnersFactory.sqf] Recently loaded stores that will be excluded from random selection: '%1'", _excludedCollections];
 	
+	_fn_ExcludeCheck = {
+		private["_idToCheck", "_isExcluded"];
+		_idToCheck = _this select 0;
+		_isExcluded = false;
+		
+		{
+			if((_x select 0) == _idToCheck) exitWith {_isExcluded = true};
+		}foreach (_excludedCollections);
+		
+		_isExcluded
+	};
+	
 	//The pool of random collections should contain all collections except the exluded ones
 	_randomCollectionPool = [];
 	{
-		if(_excludedCollections find (_x select 0) < 0) then {
+		if(not ([_x select 0] call _fn_ExcludeCheck)) then {
 			_randomCollectionPool pushBack _x;
 		};
 	}foreach (_storeOwnersCollections);
