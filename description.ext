@@ -67,6 +67,7 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\vPin\dialog\vPin_mainMenu.hpp"
 #include "addons\AF_Keypad\AF_KP_defines.hpp"
 #include "addons\AF_Keypad\AF_KP_dialogs.hpp"
+#include "addons\JTS_PM\PM_Compact.hpp"
 
 class RscTitles
 {
