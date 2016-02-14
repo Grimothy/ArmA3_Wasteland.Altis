@@ -18,7 +18,7 @@ _role4names = ["ultra-a3.ddns.net:9020"];
 _role5 = "Steam Group";
 _role5names = ["Come join our Steam community. Search for UltraA3Wasteland on Steam"];
 _role6 = "Live stats!";
-_role6names = ["Coming soon! Track your progress, find your rivials and view the leaderboards!"];
+_role6names = ["Coming soon! Track your progress, find your rivals and view the leaderboards!"];
 
 {
 sleep 2;
