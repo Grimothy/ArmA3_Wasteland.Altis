@@ -7,7 +7,7 @@ _onScreenTime = 20;
 
 sleep 90;
 
-_role1 = "Welcome to Ultra A3wasteland";
+_role1 = "Welcome to Ultra A3wasteland, a Dynamic Wasteland Environment! ";
 _role1names = ["Server Hosted in Canada"];
 _role2 = "Please report hackers to";
 _role2names = ["Ftnwo.clan@gmail.com"];
@@ -17,13 +17,15 @@ _role4 = "TeamSpeak";
 _role4names = ["ultra-a3.ddns.net:9020"];
 _role5 = "Steam Group";
 _role5names = ["Come join our Steam community. Search for UltraA3Wasteland on Steam"];
+_role6 = "Live stats!";
+_role6names = ["Coming soon! Track your progress, find your rivials and view the leaderboards!"];
 
 {
 sleep 2;
 _memberFunction = _x select 0;
 _memberNames = _x select 1;
-_finalText = format ["<t size='0.50' color='#f2cb0b' align='left'>%1<br /></t>", _memberFunction];
-_finalText = _finalText + "<t size='0.70' color='#FFFFFF' align='left'>";
+_finalText = format ["<t size='0.55' color='#08a73d' align='left'>%1<br /></t>", _memberFunction];
+_finalText = _finalText + "<t size='0.62' color='#FFFFFF' align='left'>";
 {_finalText = _finalText + format ["%1<br />", _x]} forEach _memberNames;
 _finalText = _finalText + "</t>";
 _onScreenTime + (((count _memberNames) - 1) * 0.5);
@@ -41,5 +43,6 @@ sleep (_onScreenTime);
 [_role2, _role2names],
 [_role3, _role3names],
 [_role4, _role4names],
-[_role5, _role5names]
+[_role5, _role5names],
+[_role6, _role6names]
 ];
