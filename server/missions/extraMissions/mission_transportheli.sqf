@@ -73,16 +73,16 @@ _setupObjects =
 			};
 		};
 
-		// remove flares because it overpowers AI choppers
-		if (_type isKindOf "Air") then
-		{
-			{
-				if (["CMFlare", _x] call fn_findString != -1) then
-				{
-					_vehicle removeMagazinesTurret [_x, [-1]];
-				};
-			} forEach getArray (configFile >> "CfgVehicles" >> _type >> "magazines");
-		};
+		// // remove flares because it overpowers AI choppers
+		// if (_type isKindOf "Air") then
+		// {
+			// {
+				// if (["CMFlare", _x] call fn_findString != -1) then
+				// {
+					// _vehicle removeMagazinesTurret [_x, [-1]];
+				// };
+			// } forEach getArray (configFile >> "CfgVehicles" >> _type >> "magazines");
+		// };
 
 		[_vehicle, _aiGroup] spawn checkMissionVehicleLock;
 		_vehicle
@@ -100,9 +100,9 @@ _setupObjects =
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 
-	_aiGroup setCombatMode "GREEN"; // units will defend themselves
-	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact
-	_aiGroup setFormation "VEE";
+	_aiGroup setCombatMode "GREEN"; // Hold fire, engage at will (https://community.bistudio.com/wiki/setCombatMode)
+	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact (https://community.bistudio.com/wiki/setBehaviour)
+	_aiGroup setFormation "VEE";	// (https://community.bistudio.com/wiki/setFormation)
 
 	_speedMode = if (missionDifficultyHard) then { "NORMAL" } else { "LIMITED" };
 
