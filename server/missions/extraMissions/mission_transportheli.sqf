@@ -1,13 +1,14 @@
 // ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
-//	@file Name: mission_HostileHeliFormation.sqf
+//	@file Name: mission_transportheli.sqf
 //	@file Author: JoSchaap, AgentRev
 
 if (!isServer) exitwith {};
 #include "extraMissionDefines.sqf"
 
-private ["_heliChoices", "_convoyVeh", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_vehicleName2", "_numWaypoints", "_box1", "_box2", "_box3"];
+private ["_transportChoicesUnarmed", "_transportChoicesArmed", "_supportChoices", "_veh1", "_veh2", "_veh3", "_createVehicle", "_vehicles", "_leader", "_speedMode", "_waypoint", 
+	"_vehicleName", "_vehicleName2", "_vehicleName3", "_numWaypoints", "_box1", "_box2", "_box3"];
 
 _setupVars =
 {
@@ -26,18 +27,17 @@ _setupObjects =
 
 	_veh1 = [];
 	
-	if ((floor random 2) > 0 ) then {
-		_veh1 append  (_transportChoicesArmed call BIS_fnc_selectRandom);
-		_veh1 append (true);
+	if ((floor random 2) == 1 ) then {
+		_veh1 append [(_transportChoicesArmed call BIS_fnc_selectRandom)];
+		_veh1 append [true];
 	}
 	else {
-		_veh1 append  (_transportChoicesUnarmed call BIS_fnc_selectRandom);
-		_veh1 append (false);
+		_veh1 append [(_transportChoicesUnarmed call BIS_fnc_selectRandom)];
+		_veh1 append [false];
 	};
 
 	_veh2 = _supportChoices call BIS_fnc_selectRandom; 
 	_veh3 = _supportChoices call BIS_fnc_selectRandom;
-
 
 	_createVehicle =
 	{
@@ -61,17 +61,16 @@ _setupObjects =
 		_soldier moveInDriver _vehicle;
 
 		if (_isArmed) then {
-		
-				if ((_type find "Transport") >= 0 ) then {
-					_soldier = [_aiGroup, _position] call createRandomSoldierC;
-					_soldier moveInTurret [_vehicle, [1]];
-					_soldier = [_aiGroup, _position] call createRandomSoldierC;
-					_soldier moveInTurret [_vehicle, [2]];
-				}
-				else {
-					_soldier = [_aiGroup, _position] call createRandomSoldierC;
-					_soldier moveInGunner _vehicle;
-				};
+			if ((_type find "Transport") >= 0 ) then {
+				_soldier = [_aiGroup, _position] call createRandomSoldierC;
+				_soldier moveInTurret [_vehicle, [1]];
+				_soldier = [_aiGroup, _position] call createRandomSoldierC;
+				_soldier moveInTurret [_vehicle, [2]];
+			}
+			else {
+				_soldier = [_aiGroup, _position] call createRandomSoldierC;
+				_soldier moveInGunner _vehicle;
+			};
 		};
 
 		// remove flares because it overpowers AI choppers
@@ -125,8 +124,19 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> (_veh1 select 0) >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> (_veh1 select 0) >> "displayName");
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh2 >> "displayName");
+	_vehicleName3 = getText (configFile >> "CfgVehicles" >> _veh3 >> "displayName");
 
-	_missionHintText = format ["A Transport Helicopter and escort containing <t color='%3'>%1</t> and two <t color='%3'>%2</t> insert random text  ", _vehicleName, _vehicleName2, mainMissionColor];
+	_textVehSupport = "";
+	
+	if(_vehicleName2 == _vehicleName3) then {
+		_textVehSupport = format ["2 <t color='%2'>%1</t> helicopters", _vehicleName2, extraMissionColor];
+	}
+	else
+	{
+		_textVehSupport = format ["1 <t color='%3'>%1</t> and 1 <t color='%3'>%2</t>", _vehicleName2, _vehicleName3, extraMissionColor];
+	};
+	
+	_missionHintText = format ["A <t color='%3'>%1</t> helicopter and an escort of %2 are on the move. Take them down and collect their payload!", _vehicleName, _textVehSupport, extraMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 	diag_log "Loaded Mission_transportheli";
@@ -156,7 +166,7 @@ _successExec =
 	_box3 setDir random 360;
 	[_box3, "mission_Main_A3snipers"] call fn_refillbox;
 
-	_successHintMessage = "The sky is clear again, the enemy patrol was taken out! Ammo crates have fallen near the wreck.";
+	_successHintMessage = "The helicopter escort has been taken down! Ammo crates have fallen near the wreck.";
 };
 
-_this call mainMissionProcessor;
+_this call extraMissionProcessor;
