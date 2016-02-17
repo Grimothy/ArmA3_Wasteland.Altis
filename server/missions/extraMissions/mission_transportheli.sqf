@@ -18,7 +18,6 @@ _setupVars =
 
 _setupObjects =
 {
-	diag_log "Loading Mission_transportheli";
 	_missionPos = markerPos (((call cityList) call BIS_fnc_selectRandom) select 0);
 
 	_transportChoicesUnarmed = ["O_Heli_Transport_04_covered_F","O_Heli_Transport_04_black_F"];
@@ -139,7 +138,6 @@ _setupObjects =
 	_missionHintText = format ["A <t color='%3'>%1</t> helicopter and an escort of %2 are on the move. Take them down and collect their payload!", _vehicleName, _textVehSupport, extraMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
-	diag_log "Loaded Mission_transportheli";
 };
 
 _waitUntilMarkerPos = {getPosATL _leader};
