@@ -12,6 +12,7 @@ _player addRating 9999999;
 [objNull, _player] call mf_player_actions_refresh;
 [] execVM "client\functions\playerActions.sqf";
 [] execVM "addons\vPin\init.sqf";    // Vehicle Pinlock script
+[] execVM "addons\EtV\init.sqf";     // Explosives to Vehicles
 
 _player groupChat "Wasteland - Initialization Complete";
 playerSetupComplete = true;
