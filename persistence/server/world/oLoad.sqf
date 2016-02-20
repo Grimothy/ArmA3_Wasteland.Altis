@@ -92,7 +92,7 @@ _exclObjectIDs = [];
 		{
 			_obj allowDamage true;
 			_obj setDamage _damage;
-			_obj setVariable ["allowDamage", true, true];
+			_obj setVariable ["allowDamage", true];
 		};
 
 		if (!isNil "_owner") then
@@ -182,6 +182,7 @@ _exclObjectIDs = [];
 			if (!isNil "_turretMags" && _staticWeaponSavingOn && {_class call _isStaticWeapon}) then
 			{
 				_obj setVehicleAmmo 0;
+				{ _obj removeMagazineTurret [_x select 0, _x select 1] } forEach magazinesAllTurrets _obj;
 				{ _obj addMagazine _x } forEach _turretMags;
 			};
 

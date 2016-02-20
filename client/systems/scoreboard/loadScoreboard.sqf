@@ -26,7 +26,7 @@ _code =
 		_civColor = ["Map", "Civilian"] call BIS_fnc_displayColorGet;
 		_defColor = ["Map", "Unknown"] call BIS_fnc_displayColorGet;
 
-		_allPlayers = call fn_allPlayers;
+		_allPlayers = allPlayers;
 
 		// Exclude headless
 		for "_i" from (count _allPlayers - 1) to 0 step -1 do

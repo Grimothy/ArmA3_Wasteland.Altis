@@ -23,7 +23,7 @@ if (_packetName == "BIS_fnc_MP_packet") then
 
 	if (_function == "BIS_fnc_execVM") then
 	{
-		_filePath = if (typeName _args == "STRING") then { _args } else { [_args, 1, "", [""]] call BIS_fnc_param };
+		_filePath = if (typeName _args == "STRING") then { _args } else { _args param [1, "", [""]] };
 
 		{
 			if (_filePath == _x) exitWith
