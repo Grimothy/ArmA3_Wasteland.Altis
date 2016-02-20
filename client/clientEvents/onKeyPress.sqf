@@ -16,32 +16,30 @@ _alt = _this select 4;
 
 _handled = false;
 
-systemChat str _key;
 // ********** Hardcoded keys **********
-// keycodes are defined in client\clientEvents\customKeys.sqf
 switch (true) do
 {
 	// U key
-	case (_key in A3W_customKeys_adminMenu):
+	case (_key == 22):
 	{
 		execVM "client\systems\adminPanel\checkAdmin.sqf";
 	};
 
 	// Tilde (key above Tab)
-	case (_key in A3W_customKeys_playerMenu):
+	case (_key == 41):
 	{
 		[] spawn loadPlayerMenu;
 		_handled = true;
 	};
 
 	// Home & Windows keys
-	case (_key in A3W_customKeys_playerNames):
+	case (_key in [199,219,220]):
 	{
 		showPlayerNames = if (isNil "showPlayerNames") then { true } else { !showPlayerNames };
 	};
 
 	// Earplugs - End Key
-	case (_key in A3W_customKeys_earPlugs):
+	case (_key == 207):
 	{
 		if (soundVolume > 0.5) then
 		{
