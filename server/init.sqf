@@ -71,7 +71,7 @@ if (isServer) then
 	// Broadcast server rules
 	if (loadFile (externalConfigFolder + "\serverRules.sqf") != "") then
 	{
-		[[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"], "BIS_fnc_execVM", true, true] call A3W_fnc_MP;
+		[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExec ["BIS_fnc_execVM", 0, true];
 	};
 };
 
@@ -110,8 +110,7 @@ if (isServer) then
 		"A3W_teamPlayersMap",
 		"A3W_remoteBombStoreRadius",
 		"A3W_vehiclePurchaseCooldown",
-		"A3W_globalVoiceWarnTimer",
-		"A3W_globalVoiceMaxWarns",
+		"A3W_disableGlobalVoice",
 		"A3W_antiHackMinRecoil",
 		"A3W_spawnBeaconCooldown",
 		"A3W_spawnBeaconSpawnHeight",
@@ -216,7 +215,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 			}
 			else
 			{
-				diag_log "[INFO] ███ A3W NOT running with extDB!";
+				diag_log "[INFO] ███ extDB2 NOT FOUND! Make sure extDB2.dll (Windows) or extDB2.so (Linux) and extdb-conf.ini are in the same directory as arma3server, and that you are using the -filePatching parameter";
 			};
 
 			_savingMethod = "profile"; // fallback
@@ -238,7 +237,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 		}
 		else
 		{
-			diag_log "[INFO] ███ A3W NOT running with iniDB!";
+			diag_log "[INFO] ███ iniDB NOT FOUND! Make sure iniDB.dll is in the same directory as arma3server.exe, and that you are using the -filePatching parameter";
 			_savingMethod = "profile"; // fallback
 		};
 	};
@@ -276,7 +275,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 
 				["A3W_flagCheckOnJoin", "onPlayerConnected", { [_uid, _name] spawn fn_kickPlayerIfFlagged }] call BIS_fnc_addStackedEventHandler;
 
-				{ [getPlayerUID _x, name _x] call fn_kickPlayerIfFlagged } forEach (call fn_allPlayers);
+				{ [getPlayerUID _x, name _x] call fn_kickPlayerIfFlagged } forEach allPlayers;
 			};
 		};
 	};
