@@ -97,7 +97,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="Ultra A3Wasteland Altis v1.2";
+		briefingName="Ultra A3Wasteland Altis v1.2b";
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
