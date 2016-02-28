@@ -12,3 +12,4 @@
 #include "11_SelakanoCoast.sqf";
 #include "12_Altiswest.sqf";
 #include "13_Saltflat.sqf";
+#include "14_Altis_Oilrigs";
