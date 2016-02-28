@@ -111,9 +111,9 @@ _setupObjects =
 	{
 		_waypoint = _aiGroup addWaypoint [markerPos (_x select 0), 0];
 		_waypoint setWaypointType "MOVE";
-		_waypoint setWaypointCompletionRadius 50;
+		_waypoint setWaypointCompletionRadius 75;
 		_waypoint setWaypointCombatMode "GREEN";
-		_waypoint setWaypointBehaviour "SAFE";
+		_waypoint setWaypointBehaviour "AWARE";
 		_waypoint setWaypointFormation "VEE";
 		_waypoint setWaypointSpeed _speedMode;
 	} forEach ((call cityList) call BIS_fnc_arrayShuffle);
