@@ -8,18 +8,18 @@ class EditorData
 	toggles=41;
 	class ItemIDProvider
 	{
-		nextID=3559;
+		nextID=3564;
 	};
 	class MarkerIDProvider
 	{
-		nextID=190;
+		nextID=195;
 	};
 	class Camera
 	{
-		pos[]={12104.127,18.902588,24916.738};
-		dir[]={0.18513963,-0.34191653,0.92141026};
-		up[]={0.067359276,0.93972826,0.33523947};
-		aside[]={0.98050177,-7.1333488e-007,-0.19700889};
+		pos[]={11929.655,89.100914,24861.906};
+		dir[]={0.76927227,-0.42781004,0.47479695};
+		up[]={0.36406592,0.90386337,0.22470443};
+		aside[]={0.52529544,-2.4102628e-006,-0.8510704};
 	};
 };
 binarizationWanted=0;
@@ -96,7 +96,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2013;
+		items=2014;
 		class Item0
 		{
 			dataType="Marker";
@@ -10271,7 +10271,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10764.669,5.7999582,23955.875};
+				position[]={10764.87,4.9878502,23955.213};
 				angles[]={0,0.78539824,0};
 			};
 			side="Empty";
@@ -20708,7 +20708,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12131.273,4.176734,24993.922};
+				position[]={12128.738,4.1023655,24993.436};
 				angles[]={0,1.5413625,0};
 			};
 			side="Empty";
@@ -41206,7 +41206,7 @@ class Mission
 		class Item1990
 		{
 			dataType="Marker";
-			position[]={21901.303,-8.5157595,5999.3794};
+			position[]={21909.994,-10.111816,6007.6138};
 			name="boatSpawn_27";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41215,7 +41215,7 @@ class Mission
 		class Item1991
 		{
 			dataType="Marker";
-			position[]={21924.258,-9.3548479,5970.7471};
+			position[]={21934.781,-10.430664,5975.7788};
 			name="boatSpawn_29";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41325,6 +41325,7 @@ class Mission
 			position[]={23284.008,-164.21475,5248.9561};
 			name="marker_166";
 			type="loc_WaterTower";
+			angle=135;
 			id=3549;
 		};
 		class Item2004
@@ -41449,6 +41450,14 @@ class Mission
 			};
 			id=3558;
 			type="Land_BuoyBig_F";
+		};
+		class Item2013
+		{
+			dataType="Marker";
+			position[]={5100.2744,4.0244141,9947.9629};
+			name="marker_194";
+			type="loc_Quay";
+			id=3563;
 		};
 	};
 };
