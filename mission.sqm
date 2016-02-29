@@ -98,7 +98,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Ultra A3Wasteland Altis v1.2b";
-		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
+		overviewText="Wasteland survival sandbox by Team Wasteland. Mission modified by Sir Grim and Stoop";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
 		startWind=0;
