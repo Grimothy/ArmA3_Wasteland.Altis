@@ -59,6 +59,9 @@
 	["TERRITORY_12_Syrta", "SYRTA", 6000],
 	["TERRITORY_13_Salt_Flat_AirBase", "SALT FLAT AIRBASE", 6000],
 	["TERRITORY_13_Research_facility", "AARON MEMORIAL RESEARCH FACILITY", 6000],
-	["TERRITORY_13_Pefkas_Bay_Military_Base", "PEFKAS BAY MILITARY BASE", 7500]
-	
+	["TERRITORY_13_Pefkas_Bay_Military_Base", "PEFKAS BAY MILITARY BASE", 7500],
+	["TERRITORY_14_Rig1", "Altis Oilrig 1", 7500],
+	["TERRITORY_14_Rig2", "Altis Oilrig 2", 7500],
+	["TERRITORY_14_Rig3", "Altis Oilrig 3", 7500],
+	["TERRITORY_14_Rig4", "Altis Oilrig 4", 7500]
 ]
