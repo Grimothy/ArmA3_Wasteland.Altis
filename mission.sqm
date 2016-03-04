@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11805.654,201.06799,24657.586};
-		dir[]={-0.29544213,-0.1870016,-0.93700469};
-		up[]={-0.056247044,0.9823519,-0.17839462};
-		aside[]={-0.9538399,3.5182165e-007,0.30073905};
+		pos[]={23297.361,11.162346,5238.8247};
+		dir[]={-0.058241732,-0.99648082,0.060300965};
+		up[]={-0.69227624,0.083778463,0.71675318};
+		aside[]={0.71928364,-2.1180313e-008,0.69472009};
 	};
 };
 binarizationWanted=0;
@@ -72,6 +72,10 @@ addons[]=
 	"A3_Structures_F_Ind_Pipes"
 };
 randomSeed=5710333;
+class ScenarioData
+{
+	author="Mr. Sir Grim";
+};
 class Mission
 {
 	class Intel
@@ -95,7 +99,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2013;
+		items=2012;
 		class Item0
 		{
 			dataType="Marker";
@@ -10436,7 +10440,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[2,4,2]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[48,12,12,12,12,12,4,4,12,6,4,12,12,4,4,4,4]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight""],[2,20,4]],[[""B_Kitbag_mcamo""],[4]]],false]";
+							value="[[[[],[]],[[""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""Chemlight_blue"",""Chemlight_red"",""Chemlight_yellow"",""SmokeShellPurple""],[4,4,10,4,4,4,4,4,5,8,5]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -19399,7 +19403,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12114.86,32.786606,25032.529};
+				position[]={12114.86,32.787361,25032.527};
 				angles[]={0,0,0.0016231562};
 			};
 			side="Empty";
@@ -19426,7 +19430,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[2,4,2]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[48,12,12,12,12,12,4,4,12,6,4,12,12,4,4,4,4]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight""],[2,20,4]],[[""B_Kitbag_mcamo""],[4]]],false]";
+							value="[[[[],[]],[[""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""SmokeShellOrange""],[2,2,2,2,2,4,4,2]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -28409,8 +28413,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23313.824,33.098427,5232.4536};
-				angles[]={0.0011478688,2.356194,6.2820377};
+				position[]={23313.824,33.098381,5232.4541};
+				angles[]={0.0011519173,2.3561945,6.282033};
 			};
 			side="Empty";
 			class Attributes
@@ -28436,7 +28440,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[2,4,2]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[48,12,12,12,12,12,4,4,12,6,4,12,12,4,4,4,4]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight""],[2,20,4]],[[""B_Kitbag_mcamo""],[4]]],false]";
+							value="[[[[],[]],[[""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""Chemlight_blue"",""Chemlight_red"",""Chemlight_yellow"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellYellow""],[4,4,7,5,4,4,4,4,3,3,2,1,1]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -37464,8 +37468,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6858.7515,32.945755,8423.7734};
-				angles[]={6.2815638,4.712389,0};
+				position[]={6858.751,32.946068,8423.7734};
+				angles[]={6.2815623,4.712389,0};
 			};
 			side="Empty";
 			class Attributes
@@ -37491,7 +37495,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[2,4,2]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[48,12,12,12,12,12,4,4,12,6,4,12,12,4,4,4,4]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight""],[2,20,4]],[[""B_Kitbag_mcamo""],[4]]],false]";
+							value="[[[[],[]],[[""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""Chemlight_blue"",""Chemlight_red""],[4,4,7,4,4,4,4,4,4]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -41209,7 +41213,7 @@ class Mission
 		class Item1993
 		{
 			dataType="Marker";
-			position[]={12133.323,-148.70108,24979.324};
+			position[]={12123.109,-151.51231,25022.049};
 			name="boatSpawn_32";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41218,7 +41222,7 @@ class Mission
 		class Item1994
 		{
 			dataType="Marker";
-			position[]={12112.024,-148.46075,24985.631};
+			position[]={12126.646,-148.4326,24969.631};
 			name="boatSpawn_33";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41227,7 +41231,7 @@ class Mission
 		class Item1995
 		{
 			dataType="Marker";
-			position[]={10862.143,-102.34569,23596.189};
+			position[]={10850.654,-103.27806,23604.107};
 			name="boatSpawn_34";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41236,7 +41240,7 @@ class Mission
 		class Item1996
 		{
 			dataType="Marker";
-			position[]={10841.762,-101.61788,23590.129};
+			position[]={10832.188,-100.57046,23580.451};
 			name="boatSpawn_35";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41245,7 +41249,7 @@ class Mission
 		class Item1997
 		{
 			dataType="Marker";
-			position[]={23288.721,-165.73108,5266.3843};
+			position[]={23293.361,-165.82837,5266.2798};
 			name="boatSpawn_36";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41254,7 +41258,7 @@ class Mission
 		class Item1998
 		{
 			dataType="Marker";
-			position[]={23292.311,-164.31879,5246.3066};
+			position[]={23293.555,-163.99506,5241.3901};
 			name="boatSpawn_37";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41263,7 +41267,7 @@ class Mission
 		class Item1999
 		{
 			dataType="Marker";
-			position[]={6884.7417,-137.91174,8440.4922};
+			position[]={6872.022,-138.16524,8435.1826};
 			name="boatSpawn_38";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41272,7 +41276,7 @@ class Mission
 		class Item2000
 		{
 			dataType="Marker";
-			position[]={6884.5547,-137.62344,8425.7734};
+			position[]={6897.7412,-138.0195,8408.5596};
 			name="boatSpawn_39";
 			type="Empty";
 			colorName="ColorBlue";
@@ -41417,14 +41421,6 @@ class Mission
 			};
 			id=3558;
 			type="Land_BuoyBig_F";
-		};
-		class Item2012
-		{
-			dataType="Marker";
-			position[]={5100.2744,4.0244141,9947.9629};
-			name="marker_194";
-			type="loc_Quay";
-			id=3563;
 		};
 	};
 };
