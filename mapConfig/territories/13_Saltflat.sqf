@@ -21,22 +21,23 @@ _marker setMarkerSize [85, 90];
 _marker setMarkerColor "ColorYellow";
 _marker setMarkerType "Empty";
 
-_pos = [22905.535,16941.863,24.305134];
+_pos = [22908.777,16932.039,3.190000];
 _marker = createMarker ["FLAG_13_Research_facility", _pos];
 _marker setMarkerType "mil_flag";
 _marker setMarkerText "B";
 _marker setMarkerSize [.5, .5];
 _marker setMarkerColor "ColorYellow";
 
-_pos = [20940.242,19251.244,13.731282];
-_marker = createMarker ["TERRITORY_Pefkas_Bay_Military_Base", _pos];
+_pos = [20939.455,19234.861,12.662842];
+_marker = createMarker ["TERRITORY_13_Pefkas_Bay_Military_Base", _pos];
 _marker setMarkerShape "RECTANGLE";
 _marker setMarkerBrush "DiagGrid";
-_marker setMarkerSize [60, 60];
+_marker setMarkerSize [75, 90];
+_marker setMarkerDir 112.83504;
 _marker setMarkerColor "ColorYellow";
 _marker setMarkerType "Empty";
 
-_pos = [20940.242,19251.244,13.731282];
+_pos = [20939.455,19234.861,12.662842];
 _marker = createMarker ["FLAG_13_Pefkas_Bay_Military_Base", _pos];
 _marker setMarkerType "mil_flag";
 _marker setMarkerText "C";
