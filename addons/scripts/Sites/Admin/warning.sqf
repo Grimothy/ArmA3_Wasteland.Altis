@@ -32,6 +32,6 @@ _object setMarkerType "mil_dot";
 _pos = [1114.3447,2348.644,0];
 _object = createMarker ["Global", _pos];
 _object setMarkerShape "ICON";
-_object setMarkerText "Spammng global may result in a Kick/BAN";
+_object setMarkerText "Spammng global with voice or text may result in a Kick/BAN";
 _object setMarkerColor "ColorOrange";	
 _object setMarkerType "mil_dot";
