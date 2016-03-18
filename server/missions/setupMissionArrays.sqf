@@ -45,11 +45,14 @@ MoneyMissions =
 
 ExtraMissions =
 [
-	["mission_Sniper", 1],
-	["mission_Smugglers", 1],
-	["mission_HostileJet", 0.5],
-	["mission_HackLaptop", 1],
-	["mission_transportheli", 0.5]
+	//["mission_Sniper", 1],
+	//["mission_Smugglers", 1],
+	//["mission_HostileJet", 0.5],
+	//["mission_HackLaptop", 1],
+	//["mission_transportheli", 0.5],
+	["mission_pirates", 0.5]
+	//["mission_OilrigPatrol", 0.5]
+	
 ];
 
 PatrolMissions =
@@ -103,4 +106,8 @@ CoastalConvoyPaths = [];
 PatrolConvoyPaths = [];
 {
 	PatrolConvoyPaths pushBack [_x, false];
+} forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\patrolConvoysList.sqf");PatrolConvoyPaths = [];
+RigConvoyPaths = [];
+{
+	RigConvoyPaths pushBack [_x, false];
 } forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\patrolConvoysList.sqf");
