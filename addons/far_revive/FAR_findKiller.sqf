@@ -4,11 +4,10 @@
 //	@file Name: FAR_findKiller.sqf
 //	@file Author: AgentRev
 
-private ["_target", "_targetGroup", "_targetSide", "_vehicle", "_killer", "_ammo", "_vehicleKiller", "_suspects", "_suspectCount", "_firstCrew", "_firstCrewGroup", "_firstCrewSide", "_driver", "_offset", "_possibleKillers", "_possiblePaths", "_suspect", "_mags", "_magAmmo", "_magAmmoExpl", "_offsetX"];
+private ["_target", "_targetSide", "_vehicle", "_killer", "_ammo", "_vehicleKiller", "_suspects", "_suspectCount", "_firstCrew", "_firstCrewSide", "_driver", "_offset", "_possibleKillers", "_suspect", "_mags", "_magAmmo", "_magAmmoExpl", "_offsetX"];
 
 _target = _this;
-_targetGroup = group _target;
-_targetSide = side _targetGroup;
+_targetSide = side group _target;
 _vehicle = _target getVariable ["FAR_killerVehicle", objNull];
 
 //systemChat format ["FAR_findKiller %1", [typeOf _target, name _target, typeOf _vehicle]];
@@ -46,8 +45,7 @@ if (isNull _killer) then
 	if (_suspectCount == 0) exitWith {}; // Crushed by empty vehicle
 
 	_firstCrew = (_suspects select 0) select 0;
-	_firstCrewGroup = group _firstCrew;
-	_firstCrewSide = side _firstCrewGroup;
+	_firstCrewSide = side group _firstCrew;
 	_driver = driver _vehicle;
 	_offset = _vehicle worldToModelVisual (_target modelToWorldVisual [0,0,0]);
 
@@ -60,7 +58,6 @@ if (isNull _killer) then
 	else
 	{
 		_possibleKillers = [];
-		_possiblePaths = [];
 
 		{
 			_suspect = _x select 0;
@@ -73,23 +70,21 @@ if (isNull _killer) then
 
 				if (_magAmmo == _ammo || _magAmmoExpl == _ammo) exitWith
 				{
-					_possibleKillers pushBack _suspect; // Turret kill with gunner still seated
-					_possiblePaths pushBack _path;
+					_possibleKillers pushBack [_suspect, _path]; // Turret kill with gunner still seated
 				};
 			} forEach _mags;
 		} forEach _suspects;
 
 		if (count _possibleKillers > 0) then
 		{
-			if (isClass (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "RightDoorGun") && // is dual doorgun heli and a suspect used a door gun
-			   {count (_possiblePaths arrayIntersect [[1],[2]]) > 0}) then
+			if (isClass (configFile >> "CfgVehicles" >> typeOf _vehicle >> "Turrets" >> "RightDoorGun")) then // is dual doorgun heli
 			{
 				// check on which side of the vehicle the target is located, and award the kill to the matching gunner
 				_offsetX = _offset select 0;
 
 				{
-					_suspect = _x;
-					_path = _possiblePaths select _forEachIndex;
+					_suspect = _x select 0;
+					_path = _x select 1;
 
 					if ((_offsetX <= 0 && _path isEqualTo [1]) || (_offsetX > 0 && _path isEqualTo [2])) exitWith
 					{
@@ -107,7 +102,7 @@ if (isNull _killer) then
 	// if roadkill but driver bailed out or turret kill but gunner bailed out, and the first crewmember is an enemy, award him the kill, otherwise nobody is blamed
 	if (isNull _killer) then
 	{
-		if (_targetSide == sideUnknown || _firstCrewSide != _targetSide || (!(_targetSide in [BLUFOR,OPFOR]) && _firstCrewGroup != _targetGroup)) then
+		if (_targetSide == sideUnknown || _firstCrewSide getFriend _targetSide < 0.6 || (!(_targetSide in [BLUFOR,OPFOR]) && _firstCrewSide == _targetSide)) then
 		{
 			_killer = _firstCrew;
 		};
