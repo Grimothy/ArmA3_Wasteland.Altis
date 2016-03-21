@@ -7,6 +7,9 @@
 //	@file Created: 13/02/2014 22:52
 
 // starting positions for this route
+
+//WEST OF SALT FLATS
+
 _starts =
 [
 	[21676.070, 19098.602],
