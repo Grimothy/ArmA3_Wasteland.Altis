@@ -7,19 +7,22 @@
 //	@file Created: 13/02/2014 22:52
 
 // starting positions for this route
+
+//ORECASTRO PATROL
 _starts =
 [
-	[4358.6313, 21123.746],
-	[4353.8003, 21175.734],
-	[4352.7617, 21228.533]
+	[4746.3,20529.4],
+	[4797.86,20522.2],
+	[4898.88,20520.1]
+	
 ];
 
 // starting directions in which the vehicles are spawned on this route
 _startDirs =
 [
-	157,
-	157,
-	157
+	92,
+	92,
+	92
 ];
 
 // the route
