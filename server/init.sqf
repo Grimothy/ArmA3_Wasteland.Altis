@@ -71,7 +71,7 @@ if (isServer) then
 	// Broadcast server rules
 	if (loadFile (externalConfigFolder + "\serverRules.sqf") != "") then
 	{
-		[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExec ["execVM", -2, true];
+		[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExecCall ["execVM", [-2,0] select hasInterface, true];
 	};
 };
 
@@ -139,7 +139,8 @@ if (isServer) then
 		"A3W_hcObjCaching",
 		"A3W_hcObjCachingID",
 		"A3W_hcObjSaving",
-		"A3W_hcObjSavingID"
+		"A3W_hcObjSavingID",
+		"A3W_headshotNoRevive"
 	];
 
 	["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;

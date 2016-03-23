@@ -1,4 +1,4 @@
-// ******************************************************************************************
+﻿// ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 #include "genstoreDefines.sqf"
@@ -34,7 +34,7 @@ class genstored
 		class TopBar: IGUIBack
 		{
 			idc = -1;
-			colorBackground[] = {0.25, 0.51, 0.96, 0.8};
+			colorBackground[] = {A3W_UICOLOR_R, A3W_UICOLOR_G, A3W_UICOLOR_B, 0.8};
 
 			#define GenStoreTopBar_H (0.05 * SZ_SCALE)
 
@@ -62,7 +62,6 @@ class genstored
 			idc = genstore_money;
 			text = "Cash:";
 			sizeEx = 0.04 * TEXT_SCALE;
-
 			x = GenStoreMainBG_X + (0.6033 * SZ_SCALE);
 			y = GenStoreMainBG_Y + (0.005 * SZ_SCALE);
 			w = 0.1126 * SZ_SCALE;
@@ -111,7 +110,7 @@ class genstored
 		class ItemDescription: w_RscStructuredTextLeft
 		{
 			idc = genstore_item_desc;
-			size = 0.04 * TEXT_SCALE;
+			size = 0.039 * TEXT_SCALE;
 			colorBackground[] = {0, 0, 0, 0.3};
 
 			x = GenStoreMainBG_X + (0.1533 * SZ_SCALE);
@@ -316,4 +315,3 @@ class genstored
 		};
 	};
 };
-

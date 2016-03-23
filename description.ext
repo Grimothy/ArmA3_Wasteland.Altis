@@ -63,9 +63,11 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "client\systems\playerMenu\dialog\teamkill_dialog.hpp"
 #include "addons\proving_ground\PG_config.hpp"
 #include "addons\outlw_magrepack\config.hpp"
+#include "addons\taw_vd\dialog.hpp"
 #include "addons\vPin\dialog\vPin_mainMenu.hpp"
 #include "addons\AF_Keypad\AF_KP_defines.hpp"
 #include "addons\AF_Keypad\AF_KP_dialogs.hpp"
+#include "addons\JTS_PM\PM_Compact.hpp"
 
 class RscTitles
 {
@@ -79,6 +81,7 @@ class RscTitles
 
 class CfgFunctions
 {
+	#include "addons\taw_vd\CfgFunctions.hpp"
 	class A3W
 	{
 		#include "client\CfgFunctions.hpp"
@@ -95,6 +98,7 @@ class CfgRemoteExec // applies only to clients
 {
 	class Functions
 	{
+		
 		#ifndef A3W_DEBUG
 		mode = 1; // 0 = block all, 1 = whitelist, 2 = allow all
 		#else
