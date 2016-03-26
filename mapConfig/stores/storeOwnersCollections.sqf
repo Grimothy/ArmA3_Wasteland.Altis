@@ -131,7 +131,7 @@ _storeOwnersDatabase =
 		[	//General stores
 			[[4, 211, [], [7228.31,16437.2,0], [7219.74,16423.3,115.758]], [["weapon", ""], ["uniform", "U_B_SpecopsUniform_sgg"]]],
 			[[1, 10, [], [16461.5,17215.9,0], [16461.1,17223.7,23.9888]], [["weapon", ""], ["uniform", "U_O_SpecopsUniform_blk"]]],
-			[[5, 150, [], [20457.9,8871.86,0], [20442.6,8875.82,37.3455]], [["weapon", ""], ["uniform", "U_I_CombatUniform_tshirt"]]]
+			[[5, 150, [], [20457.9,8871.86,0], [20442.6,8875.82,37.3455]], [["weapon", ""], ["uniform", "U_I_CombatUniform_tshirt"]]],
 			//Galati[[1, 85, [], [10308.8,19077.8,0], [10324.4,19076.4,127.687]], [["weapon", ""], ["uniform", "U_IG_Guerilla1_1"]]]
 			[[6, 135, [], [25786.891,21354.854,0], [25778.363,21368.246,20.712324]], [["weapon", ""], ["uniform", "U_I_CombatUniform_tshirt"]]]
 		],
